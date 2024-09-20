@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import Tooltip from "./tooltip";
 import portrait from "./assets/ProfilePicturePhoto.jpg";
 import Files from "./files";
+import Actions from "./actions";
 export const CV = () => {
-    const [actionContent, setActionContent] = useState("files");
+    const [actionContent, setActionContent] = useState("explorer");
     return (
         <div className="h-screen">
             <div className="bg-[#3c3c3c] h-[8%] w-full p-3 flex text-gray-300">
@@ -16,7 +17,7 @@ export const CV = () => {
                 <div className="bg-[#333333] w-16 flex flex-col gap-4 content-start">
                     <Tooltip
                         current={actionContent}
-                        actionContent={"files"}
+                        actionContent={"explorer"}
                         setActionContent={setActionContent}
                     />
                     <Tooltip
@@ -56,15 +57,9 @@ export const CV = () => {
                     />
                 </div>
                 <div className="w-80 bg-[#252526]">
-                    {actionContent === "files" ? (
-                        <Files />
-                    ) : actionContent === "search" ? (
-                        <Files />
-                    ) : (
-                        <Files />
-                    )}
+                    <Actions action={actionContent} />
                 </div>
-                <div className="w-full bg-[#1e1e1e]"></div>
+                <div className="w-full bg-[#1e1e1e]">{/* <Content content={data} /> */}</div>
             </div>
         </div>
     );

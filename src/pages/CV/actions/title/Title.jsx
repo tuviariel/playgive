@@ -3,7 +3,7 @@ export const Title = (props) => {
     const { name } = props;
     return (
         <div className="flex">
-            <div className="text-gray-300 text-xs ml-5 mt-1 mr-auto">{name}</div>
+            <div className="text-gray-300 text-xs ml-5 mt-1 mr-auto capitalize">{name}</div>
             <img
                 src={dots}
                 alt="display options"
