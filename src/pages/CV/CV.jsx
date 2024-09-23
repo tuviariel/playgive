@@ -3,10 +3,11 @@ import Tooltip from "./tooltip";
 import portrait from "./assets/ProfilePicturePhoto.jpg";
 import Files from "./actions/experience";
 import Actions from "./actions";
+import Content from "./content";
 
 const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
-    const [content, setContent] = useState("start");
+    const [content, setContent] = useState("welcome");
     const tooltips = [
         "experience",
         "education",
@@ -16,7 +17,7 @@ const CV = () => {
         "information",
     ];
     return (
-        <div className="h-screen overflow-clip">
+        <div className="h-screen overflow-hidden">
             <div className="bg-[#3c3c3c] h-[8%] w-full p-3 flex text-gray-300">
                 <img src={portrait} alt="my-logo" className="mr-5 h-full w-auto rounded-full" />
                 <div className="mt-1 flex">
@@ -42,7 +43,9 @@ const CV = () => {
                 <div className="w-80 bg-[#252526]">
                     <Actions action={actionContent} content={content} setContent={setContent} />
                 </div>
-                <div className="w-full bg-[#1e1e1e]">{/* <Content content={content} /> */}</div>
+                <div className="w-full bg-[#1e1e1e]">
+                    <Content content={content} setContent={setContent} />
+                </div>
             </div>
         </div>
     );

@@ -8,11 +8,11 @@ export const Actions = (props) => {
     return (
         <>
             <Title name={action} />
-            <div className="overflow-y-scroll scroll-smooth visible snap-y">
+            <div className="overflow-y-auto h-full">
                 {action === "experience" ? (
                     <Experience content={content} setContent={setContent} />
                 ) : action === "education" ? (
-                    <Education />
+                    <Education content={content} setContent={setContent} />
                 ) : action === "skills" ? (
                     <Skills />
                 ) : action === "information" ? (

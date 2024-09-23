@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of the entire scrollbar */
+}
+
+/* .scrollbar::-webkit-scrollbar-track {  }// the scrollbar track */
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #464647; /* Color of the scrollbar thumb */
+    opacity: 20;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #515151; /* Darker on hover */
+}
