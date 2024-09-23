@@ -1,20 +1,16 @@
 import { useState } from "react";
-import docIcon from "./assets/docs.png";
-import searchIcon from "./assets/search.png";
-import shareIcon from "./assets/share.png";
-import extraIcon from "./assets/extra.png";
-import screenIcon from "./assets/screen.png";
-import debugIcon from "./assets/debug.png";
-import userIcon from "./assets/user.png";
-import settingsIcon from "./assets/settings.png";
-import docHover from "./assets/docsHover.png";
-import searchHover from "./assets/searchHover.png";
-import shareHover from "./assets/shareHover.png";
-import extraHover from "./assets/extraHover.png";
-import screenHover from "./assets/screenHover.png";
-import debugHover from "./assets/debugHover.png";
-import userHover from "./assets/userHover.png";
-import settingsHover from "./assets/settingsHover.png";
+import experienceIcon from "./assets/work.svg";
+import educationIcon from "./assets/education.svg";
+import skillsIcon from "./assets/skills.svg";
+import communicationIcon from "./assets/contact.svg";
+import locationIcon from "./assets/location.svg";
+import experienceHover from "./assets/workHover.svg";
+import educationHover from "./assets/educationHover.svg";
+import skillsHover from "./assets/skillsHover.svg";
+import communicationHover from "./assets/contactHover.svg";
+import locationHover from "./assets/locationHover.svg";
+import infoHover from "./assets/infoHover.svg";
+import infoIcon from "./assets/info.svg";
 
 export const Tooltip = (props) => {
     const { current, actionContent, setActionContent } = props;
@@ -22,13 +18,9 @@ export const Tooltip = (props) => {
     return (
         <div
             className={`relative px-3 cursor-pointer ${
-                actionContent !== "settings" &&
-                actionContent !== "user" &&
-                current === actionContent
-                    ? "border-l-2 border-white pl-2.5"
-                    : ""
+                current === actionContent ? "border-l-2 border-white pl-2.5" : ""
             } ${
-                actionContent === "explorer"
+                actionContent === "experience"
                     ? "mt-3"
                     : actionContent === "debug"
                     ? "mb-auto"
@@ -41,37 +33,43 @@ export const Tooltip = (props) => {
             onClick={() => setActionContent(actionContent)}>
             <img
                 src={
-                    actionContent === "explorer"
-                        ? hover
-                            ? docHover
-                            : docIcon
+                    actionContent === "experience"
+                        ? hover || current === "experience"
+                            ? experienceHover
+                            : experienceIcon
+                        : actionContent === "education"
+                        ? hover || current === "education"
+                            ? educationHover
+                            : educationIcon
+                        : actionContent === "skills"
+                        ? hover || current === "skills"
+                            ? skillsHover
+                            : skillsIcon
+                        : actionContent === "communication"
+                        ? hover || current === "communication"
+                            ? communicationHover
+                            : communicationIcon
+                        : actionContent === "location"
+                        ? hover || current === "location"
+                            ? locationHover
+                            : locationIcon
+                        : actionContent === "information"
+                        ? hover || current === "information"
+                            ? infoHover
+                            : infoIcon
                         : actionContent === "search"
-                        ? hover
-                            ? searchHover
-                            : searchIcon
-                        : actionContent === "share"
-                        ? hover
-                            ? shareHover
-                            : shareIcon
-                        : actionContent === "extra"
-                        ? hover
-                            ? extraHover
-                            : extraIcon
-                        : actionContent === "screen"
-                        ? hover
-                            ? screenHover
-                            : screenIcon
-                        : actionContent === "debug"
-                        ? hover
-                            ? debugHover
-                            : debugIcon
-                        : actionContent === "user"
-                        ? hover
-                            ? userHover
-                            : userIcon
-                        : hover
-                        ? settingsHover
-                        : settingsIcon
+                        ? ""
+                        : ""
+                    // ? hover
+                    //     ? debugHover
+                    //     : debugIcon
+                    // : actionContent === "user"
+                    // ? hover
+                    //     ? userHover
+                    //     : userIcon
+                    // : hover
+                    // ? settingsHover
+                    // : settingsIcon
                 }
                 alt={"my-" + actionContent}
                 className="w-10 h-auto"

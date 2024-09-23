@@ -1,17 +1,28 @@
 import Title from "./title";
-import Files from "../files";
+import Experience from "./experience";
+import Education from "./education";
+import Skills from "./skills";
+import Information from "./skills";
 export const Actions = (props) => {
-    const { action, setContent } = props;
+    const { action, content, setContent } = props;
     return (
         <>
             <Title name={action} />
-            {action === "explorer" ? (
-                <Files setContent={setContent} />
-            ) : action === "search" ? (
-                <Files />
-            ) : (
-                <Files />
-            )}
+            <div className="overflow-y-scroll scroll-smooth visible snap-y">
+                {action === "experience" ? (
+                    <Experience content={content} setContent={setContent} />
+                ) : action === "education" ? (
+                    <Education />
+                ) : action === "skills" ? (
+                    <Skills />
+                ) : action === "information" ? (
+                    <Information />
+                ) : action === "search" ? (
+                    ""
+                ) : (
+                    ""
+                )}
+            </div>
         </>
     );
 };
