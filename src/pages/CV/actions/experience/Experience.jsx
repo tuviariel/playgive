@@ -18,7 +18,7 @@ export const Experience = (props) => {
         ["Beezi.app", "2020", "Front-End Web Developer", 2, "Voluntary project"],
         ["Va'ivrach", "2017-2021", "Full-Stack Web Developer", 3, "Part time paying"],
         ["Impact by Mati", "2016", "Full-Stack Web Developer", 4, "Freelance project"],
-        ["LabSute", "2014", "QA", 5, "Internship"],
+        ["LabSuit", "2014", "QA", 5, "Internship"],
     ];
     const [open, setOpen] = useState([true, true, true, true, true, true]);
     console.log(content);
@@ -60,12 +60,19 @@ export const Experience = (props) => {
                                         : LabSuit
                                 }
                                 alt={ex[0]}
-                                className="h-8 w-8 bg-slate-100 rounded-md p-0.5"
+                                className="h-8 w-8 bg-slate-100 rounded-md p-0.5 cursor-pointer"
+                                onClick={() => setContent(ex[0])}
                             />
-                            <div className="font-bold cursor-pointer ml-2 my-auto">{ex[0]}</div>
+                            <div
+                                className="font-bold cursor-pointer ml-2 my-auto"
+                                onClick={() => setContent(ex[0])}>
+                                {ex[0]}
+                            </div>
                         </div>
                         {open[i] ? (
-                            <div className="block ml-8" onClick={() => setContent(ex[0])}>
+                            <div
+                                className="block ml-8 cursor-pointer"
+                                onClick={() => setContent(ex[0])}>
                                 <div className="flex">
                                     <img src={Work} alt="Job Title" className="h-6 w-6" />
                                     <div className="ml-0.5">{ex[2]}</div>

@@ -44,7 +44,11 @@ const CV = () => {
                     <Actions action={actionContent} content={content} setContent={setContent} />
                 </div>
                 <div className="w-full bg-[#1e1e1e]">
-                    <Content content={content} setContent={setContent} />
+                    <Content
+                        content={content}
+                        setContent={setContent}
+                        setActionContent={setActionContent}
+                    />
                 </div>
             </div>
         </div>

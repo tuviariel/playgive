@@ -3,8 +3,8 @@ import CV from "../assets/CV.png";
 import Free from "../assets/ProfilePicturePhoto.jpg";
 import Leminda from "../assets/leminda.svg";
 import Vaivrach from "../assets/vaivrach.jpg";
-import Beezi from "../assets/beezi.svg";
-import Impact from "../assets/impact.png";
+import Beezi from "../assets/BeeziB.svg";
+import Impact from "../assets/impactB.png";
 import Labsuit from "../assets/labsuit.png";
 import JohnBryce from "../assets/JohnBryce.jpg";
 import Moreshet from "../assets/מורשת יעקב.jpeg";
@@ -12,61 +12,76 @@ import WhatsApp from "../assets/whatsapp.svg";
 import Phone from "../assets/phone.svg";
 import Email from "../assets/email.svg";
 import Terminal from "./terminal";
-export const Content = (props) => {
-    const { content, setContent } = props;
-    const [openNav, setOpenNav] = useState(["welcome"]);
+import Start from "./start";
 
-    // useEffect(() => {
-    //     let arr = ["welcome"];
-    //     setOpenNav(arr);
-    // }, []);
+export const Content = (props) => {
+    const { content, setContent, setActionContent } = props;
+    const [openNav, setOpenNav] = useState(["welcome"]);
+    const [rerender, setRerender] = useState();
+
     useEffect(() => {
-        addTag();
-    }, [content]);
-    const addTag = () => {
-        if (!openNav.includes(content)) {
-            setOpenNav((prev) => {
-                return prev.push(content);
-            });
+        if (openNav.includes(content)) {
+        } else {
+            let temp = openNav;
+            temp.push(content);
+            setOpenNav(temp);
         }
-    };
+        setRerender(!rerender);
+    }, [content]);
+
     const closeTag = (cont) => {
-        console.log(cont);
-        // setPrevTag(cont);
         let index = openNav.indexOf(cont);
         setContent(openNav[index - 1]);
-        setOpenNav((prev) => {
-            return prev.splice(index, 1);
-        });
+        let temp = openNav;
+        temp.splice(index, 1);
+        setOpenNav(temp);
+        setRerender(!rerender);
     };
 
     console.log(openNav);
     return (
         <div className="block h-96">
             <div className="flex h-9 w-auto">
-                <div className="overflow-x-auto w-full bg-slate-600">
-                    {openNav &&
-                        openNav.length >= 1 &&
-                        openNav.map((item) => {
-                            return (
-                                <div
-                                    className={`${
-                                        content === item ? "bg-[#1e1e1e]" : "bg-[#2d2d2d]"
-                                    } min-w-fit w-fit px-2 h-9 text-gray-300 flex border border-[#515151]`}>
-                                    <img
-                                        src={Free}
-                                        alt={content}
-                                        className="mr-2 h-4 w-4 my-auto"
-                                    />
-                                    <div className="my-auto">{content}</div>
-                                    {content !== "welcome" && (
-                                        <div className="ml-2" onClick={() => closeTag(content)}>
-                                            X
-                                        </div>
-                                    )}
+                <div className="scrollbar overflow-x-auto w-full bg-[#333333] flex">
+                    {openNav.map((item) => {
+                        return (
+                            <div
+                                className={`${
+                                    content === item ? "bg-[#1e1e1e]" : "bg-[#2d2d2d]"
+                                } min-w-fit w-fit px-2 h-7 mt-auto text-gray-300 flex border border-[#515151] cursor-pointer`}>
+                                <img
+                                    src={
+                                        item === "welcome"
+                                            ? Free
+                                            : item === "Freelance"
+                                            ? Free
+                                            : item === "Leminda.AI"
+                                            ? Leminda
+                                            : item === "Beezi.app"
+                                            ? Beezi
+                                            : item === "Va'ivrach"
+                                            ? Vaivrach
+                                            : item === "Impact by Mati"
+                                            ? Impact
+                                            : Labsuit
+                                    }
+                                    alt={item}
+                                    className="mr-2 h-4 w-4 my-auto bg-slate-100 rounded-md"
+                                    onClick={() => setContent(item)}
+                                />
+                                <div className="my-auto" onClick={() => setContent(item)}>
+                                    {item}
                                 </div>
-                            );
-                        })}
+                                {item !== "welcome" && (
+                                    <div
+                                        className="ml-2 my-auto text-sm hover:bg-slate-600 rounded-md p-0.5 cursor-pointer"
+                                        onClick={() => closeTag(item)}>
+                                        x
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
                 <a href="tel:+972-509-31-5511" className="ml-auto">
                     <img src={Phone} alt="Phone" className="h-7 w-7 m-3 mt-1" />
@@ -80,9 +95,7 @@ export const Content = (props) => {
             </div>
             <div className="flex">
                 {content === "welcome" ? (
-                    <div className="text-slate-50 ml-12 mt-12">
-                        <div className="text-lg">Welcome to My CV Site</div>
-                    </div>
+                    <Start setActionContent={setActionContent} />
                 ) : content === "Free" ? (
                     <div>Free</div>
                 ) : content === "Leminda.AI" ? (
@@ -93,15 +106,18 @@ export const Content = (props) => {
                     <div>Va'ivrach</div>
                 ) : content === "Impact" ? (
                     <div>Impact</div>
-                ) : content === "LabSute" ? (
+                ) : content === "LabSuit" ? (
                     <div>Labsuit</div>
                 ) : (
                     <div></div>
                 )}
-                <div className="relative max-w-56 ml-auto text-slate-100 text-justify border border-t-0  border-[#383838]">
+                <div className="relative w-36 ml-auto text-slate-100 text-justify border border-t-0  border-[#383838]">
                     {/* <div className="bg-gradient-to-br from-fuchsia-800 to-[#1e1e1e] to-70% mx-auto rotate-45 translate-x-1/4 h-4 w-4"></div> */}
                     <div className="absolute left-[50%] top-0 opacity-35 bg-fuchsia-800 mx-auto h-full w-1 z-10"></div>
-                    <div className="flex">
+                    {/* <div className="mt-8 mb-2 ml-2 underline text-fuchsia-800">
+                        Professional timeline:
+                    </div> */}
+                    <div className="flex mt-6">
                         <img src={Free} alt="Freelance" className="h-8 w-8 rounded-full m-2" />
                         <div className="my-auto">2024-today</div>
                     </div>
