@@ -16,17 +16,23 @@ export const Content = (props) => {
     const { content, setContent } = props;
     const [openNav, setOpenNav] = useState(["welcome"]);
 
+    // useEffect(() => {
+    //     let arr = ["welcome"];
+    //     setOpenNav(arr);
+    // }, []);
     useEffect(() => {
+        addTag();
+    }, [content]);
+    const addTag = () => {
         if (!openNav.includes(content)) {
             setOpenNav((prev) => {
                 return prev.push(content);
             });
-            setContent(content);
         }
-    }, [content]);
-
+    };
     const closeTag = (cont) => {
         console.log(cont);
+        // setPrevTag(cont);
         let index = openNav.indexOf(cont);
         setContent(openNav[index - 1]);
         setOpenNav((prev) => {
@@ -34,38 +40,47 @@ export const Content = (props) => {
         });
     };
 
-    console.log(content);
+    console.log(openNav);
     return (
         <div className="block h-96">
             <div className="flex h-9 w-auto">
-                <div className="overflow-x-auto w-full">
-                    {openNav.length > 0 &&
+                <div className="overflow-x-auto w-full bg-slate-600">
+                    {openNav &&
+                        openNav.length >= 1 &&
                         openNav.map((item) => {
-                            <div
-                                className={`${
-                                    content === item ? "bg-[#1e1e1e]" : "bg-[#2d2d2d]"
-                                } min-w-fit px-2 py-auto flex`}>
-                                <img src={content} alt={content} className="mr-2" />
-                                {content}
-                                <div className="ml-2" onClick={() => closeTag(content)}>
-                                    X
+                            return (
+                                <div
+                                    className={`${
+                                        content === item ? "bg-[#1e1e1e]" : "bg-[#2d2d2d]"
+                                    } min-w-fit w-fit px-2 h-9 text-gray-300 flex border border-[#515151]`}>
+                                    <img
+                                        src={Free}
+                                        alt={content}
+                                        className="mr-2 h-4 w-4 my-auto"
+                                    />
+                                    <div className="my-auto">{content}</div>
+                                    {content !== "welcome" && (
+                                        <div className="ml-2" onClick={() => closeTag(content)}>
+                                            X
+                                        </div>
+                                    )}
                                 </div>
-                            </div>;
+                            );
                         })}
                 </div>
                 <a href="tel:+972-509-31-5511" className="ml-auto">
-                    <img src={Phone} alt="Phone" className="h-7 w-7 m-2" />
+                    <img src={Phone} alt="Phone" className="h-7 w-7 m-3 mt-1" />
                 </a>
                 <a href="https://wa.me/972509315511?text=Hey%20Tuvia%2C%20I%27d%20like%20to%20interest%20you%20in%20a%20job%20at...">
-                    <img src={WhatsApp} alt="WhatsApp" className="h-7 w-7 m-2" />
+                    <img src={WhatsApp} alt="WhatsApp" className="h-7 w-7 m-3 mt-1" />
                 </a>
                 <a href="mailto:tuviaa109@gmail.com?subject=Job%20Opportunity&body=Hey%20Tuvia%2C%20I%27d%20like%20to%20interest%20you%20in%20a%20job%20at...">
-                    <img src={Email} alt="Email" className="h-7 w-7 m-2" />
+                    <img src={Email} alt="Email" className="h-7 w-7 m-3 mt-1" />
                 </a>
             </div>
             <div className="flex">
                 {content === "welcome" ? (
-                    <div className="text-slate-50 ml-5">
+                    <div className="text-slate-50 ml-12 mt-12">
                         <div className="text-lg">Welcome to My CV Site</div>
                     </div>
                 ) : content === "Free" ? (
