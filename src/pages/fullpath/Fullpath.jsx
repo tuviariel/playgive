@@ -1,26 +1,23 @@
 import { useEffect, useState } from "react";
 import JsonData from "./sample.json";
-import arrow from "./assets/ascend.svg";
-import back from "./assets/back.svg";
-import filtering from "./assets/filter.svg";
 import fungal from "./assets/filters.svg";
 import fungalNo from "./assets/filterNo.svg";
+import Body from "./body";
+import Filter from "./filter";
+import Header from "./header";
 
 const Fullpath = () => {
     //the Json Data State:
     const [data, setData] = useState([]);
     //a state indicator as to what is the current order selected:
     const [current, setCurrent] = useState("");
-    //a state that enable to temporarily mark a row:
-    const [mark, setMark] = useState(-1);
     //a state that saves the original order of the data:
     const [originalData, setOriginalData] = useState([]);
     //a state that enables to open filter options:
     const [filters, showFilters] = useState(false);
-    const [disabled, setDisabled] = useState(false);
     //state that define range of value to filter:
-    const [from, setFrom] = useState(["", "", "", "", ""]);
-    const [to, setTo] = useState(["", "", "", "", ""]);
+    const [from, setFrom] = useState(["", "", "", "", "2019-06-24T14:00"]); //timestamp already set to ease the search for relevant values
+    const [to, setTo] = useState(["", "", "", "", "2019-07-24T18:00"]); //timestamp already set to ease the search for relevant values
     //an Array that enables iterate data elements:
     const elementsArray = ["cost", "conversions", "clicks", "impressions", "timestamp"];
     //filling the data information on load:
@@ -51,220 +48,103 @@ const Fullpath = () => {
     };
     //the filter function:
     const filter = () => {
+        //filter from the sorted data (if sorted), or filter and refilter from the original data:
         let temp = current !== "" ? data : originalData;
+        //creating filterInfo:
+        let filterInfo = [];
         elementsArray.map((elem, i) => {
             if (to[i] || from[i]) {
-                let newArray = temp.filter((item) => {
-                    if (from[i] >= 0 && to[i] > 0) {
-                        return item[elem] >= from[i] && item[elem] <= to[i];
-                    } else if (!from[i] && to[i] > 0) {
-                        return item[elem] <= to[i];
-                    } else if (from[i] >= 0 && !to[i]) {
-                        return item[elem] >= from[i];
-                    }
-                });
-                temp = [...newArray];
+                let arr = [elem];
+                if (to[i] && from[i]) {
+                    arr.push("both");
+                    arr.push(from[i]);
+                    arr.push(to[i]);
+                } else if (to[i]) {
+                    arr.push("to");
+                    arr.push(to[i]);
+                } else {
+                    arr.push("from");
+                    arr.push(from[i]);
+                }
+                filterInfo.push(arr);
             }
         });
-
-        setData([...temp]);
+        console.log(filterInfo);
+        //filtering all items in one loop O(n) using filterInfo:
+        let newData = temp.filter((item) => {
+            let itemPassed = filterInfo.every((elem) => {
+                if (elem[0] === "timestamp") {
+                    if (elem[1] === "both") {
+                        return (
+                            new Date(item[elem[0]]) >= new Date(elem[2]) &&
+                            new Date(item[elem[0]]) <= new Date(elem[3])
+                        );
+                    } else if (elem[1] === "from") {
+                        return new Date(item[elem]) >= new Date(elem[2]);
+                    } else if (elem[1] === "to") {
+                        return new Date(item[elem]) <= new Date(elem[2]);
+                    }
+                } else {
+                    if (elem[1] === "both") {
+                        console.log(elem, item);
+                        return item[elem[0]] >= elem[2] && item[elem[0]] <= elem[3];
+                    } else if (elem[1] === "from") {
+                        return item[elem[0]] >= elem[2];
+                    } else if (elem[1] === "to") {
+                        return item[elem[0]] <= elem[2];
+                    }
+                }
+            });
+            console.log(itemPassed);
+            if (itemPassed) return item;
+        });
+        setData([...newData]);
     };
-    console.log();
+
     return (
         <div className="container">
-            <h2 className="text-center text-xl">{JsonData.title}</h2>
-            <div className="flex font-semibold capitalize w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
+            <h2 className="text-center text-2xl font-bold">{JsonData.title}</h2>
+            <div className="flex font-semibold w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
                 <img
                     src={filters ? fungalNo : fungal}
                     alt="filter"
-                    className="h-5 w-5 cursor-pointer"
+                    className="h-5 w-5 mr-10 cursor-pointer"
                     onClick={() => showFilters(!filters)}
+                    title={(filters ? "Hide" : "Show") + " filter options"}
                 />{" "}
-                filter
+                You can click a row to mark it.
             </div>
             <table className="table-auto text-left w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto ">
                 <thead>
-                    <tr>
-                        <th className="border border-blue-800">
-                            <img
-                                src={back}
-                                alt="Back to original"
-                                title="Back to original"
-                                className={`h-5 w-5 p-1 m-auto hover:bg-slate-300 cursor-pointer`}
-                                onClick={() => {
-                                    setCurrent("");
-                                    setData([...originalData]);
-                                    setTo(["", "", "", "", ""]);
-                                    setFrom(["", "", "", "", ""]);
-                                }}
-                            />
-                        </th>
-                        {elementsArray.map((elem, i) => {
-                            return (
-                                <th className="border border-blue-800" key={i}>
-                                    <div className="flex">
-                                        <div
-                                            className={`${
-                                                current.startsWith(elem)
-                                                    ? "font-bold"
-                                                    : "font-normal"
-                                            } capitalize`}>
-                                            {elem}:
-                                        </div>
-                                        <div className="border border-gray-800 rounded-md flex ml-auto">
-                                            <img
-                                                src={arrow}
-                                                alt="arrow"
-                                                className={`w-5 h-5 p-0.5 cursor-pointer ${
-                                                    current === elem + "down"
-                                                        ? "bg-blue-500"
-                                                        : "hover:bg-slate-300"
-                                                }`}
-                                                onClick={() => sort(elem, "down")}
-                                                title="Descend"
-                                            />
-                                            <img
-                                                src={arrow}
-                                                alt="arrow"
-                                                className={`w-5 h-5 rotate-180 p-0.5 cursor-pointer ${
-                                                    current === elem + "up"
-                                                        ? "bg-blue-500"
-                                                        : "hover:bg-slate-300"
-                                                }`}
-                                                onClick={() => sort(elem, "up")}
-                                                title="Ascend"
-                                            />
-                                        </div>
-                                    </div>
-                                </th>
-                            );
-                        })}
-                    </tr>
+                    <Header
+                        originalData={originalData}
+                        elementsArray={elementsArray}
+                        setCurrent={setCurrent}
+                        setData={setData}
+                        setTo={setTo}
+                        setFrom={setFrom}
+                        current={current}
+                        sort={sort}
+                    />
                     {filters && (
-                        <tr>
-                            <th className="border border-blue-800">
-                                <img
-                                    src={filtering}
-                                    alt="filter"
-                                    title="filter"
-                                    className={`h-5 w-5 p-1 m-auto rounded-full ${
-                                        disabled
-                                            ? "cursor-not-allowed"
-                                            : "cursor-pointer hover:bg-slate-300 bg-green-600"
-                                    }`}
-                                    onClick={() => !disabled && filter()}
-                                />
-                            </th>
-                            {elementsArray.map((elem, i) => {
-                                return (
-                                    <th className="border border-blue-800" key={i}>
-                                        <div>
-                                            <div className="flex gap-2">
-                                                From:
-                                                <input
-                                                    type="number"
-                                                    min={0}
-                                                    value={from[i]}
-                                                    onChange={(e) => {
-                                                        setFrom((prev) => {
-                                                            let updated = [...prev];
-                                                            updated[i] = e.target.value;
-                                                            return updated;
-                                                        });
-                                                        setDisabled(
-                                                            +e.target.value > +to[i] ||
-                                                                (+e.target.value === +to[i] &&
-                                                                    +to[i] > 0)
-                                                        );
-                                                    }}
-                                                    title={
-                                                        Number(from[i]) > Number(to[i])
-                                                            ? "The 'From' value can't be larger than the 'To' value"
-                                                            : from[i] === to[i] && +to[i] > 0
-                                                            ? "The 'From' value can't equal the 'To' value"
-                                                            : ""
-                                                    }
-                                                    className={`ml-auto w-12 border ${
-                                                        +from[i] > +to[i] ||
-                                                        (from[i] === to[i] && +to[i] > 0)
-                                                            ? "border-red-500"
-                                                            : "border-black"
-                                                    }`}
-                                                />
-                                                {elem === "cost" && "$"}
-                                            </div>
-                                            <div className="flex gap-2">
-                                                To:
-                                                <input
-                                                    type="number"
-                                                    min={0}
-                                                    value={to[i]}
-                                                    onChange={(e) => {
-                                                        setTo((prev) => {
-                                                            let updated = [...prev];
-                                                            updated[i] = e.target.value;
-                                                            return updated;
-                                                        });
-                                                        setDisabled(
-                                                            +from[i] > +e.target.value ||
-                                                                (+from[i] === +e.target.value &&
-                                                                    +e.target.value > 0)
-                                                        );
-                                                    }}
-                                                    title={
-                                                        Number(from[i]) > Number(to[i])
-                                                            ? "The 'From' value can't be larger than the 'To' value"
-                                                            : from[i] === to[i] && +to[i] > 0
-                                                            ? "The 'From' value can't equal the 'To' value"
-                                                            : ""
-                                                    }
-                                                    className={`ml-auto w-16 border ${
-                                                        Number(from[i]) > Number(to[i]) ||
-                                                        (from[i] === to[i] && +to[i] > 0)
-                                                            ? "border-red-500"
-                                                            : "border-black"
-                                                    }`}
-                                                />
-                                                {elem === "cost" && "$"}
-                                            </div>
-                                        </div>
-                                    </th>
-                                );
-                            })}
-                        </tr>
+                        <Filter
+                            filter={filter}
+                            to={to}
+                            setTo={setTo}
+                            from={from}
+                            setFrom={setFrom}
+                            elementsArray={elementsArray}
+                        />
                     )}
                 </thead>
-                <tbody>
-                    {data &&
-                        data.map((item, i) => {
-                            return (
-                                <tr
-                                    className={`${i % 2 !== 0 ? "bg-blue-200" : "bg-blue-400"} ${
-                                        mark === item.clicks
-                                            ? "bg-blue-700 font-semibold text-white"
-                                            : ""
-                                    } cursor-pointer`}
-                                    onClick={() =>
-                                        mark === item.clicks ? setMark(-1) : setMark(item.clicks)
-                                    }
-                                    key={i}>
-                                    <td className="border border-blue-800 pl-1">{i + 1}</td>
-                                    <td className="border border-blue-800 pl-1">{item.cost} $</td>
-                                    <td className="border border-blue-800 pl-1">
-                                        {item.conversions}
-                                    </td>
-                                    <td className="border border-blue-800 pl-1">{item.clicks}</td>
-                                    <td className="border border-blue-800 pl-1">
-                                        {item.impressions}
-                                    </td>
-                                    <td className="border border-blue-800 pl-1">
-                                        {item.timestamp}
-                                    </td>
-                                </tr>
-                            );
-                        })}
-                </tbody>
+                <Body data={data} />
             </table>
+            {data && data.length === 0 && (
+                <div className=" text-center w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto ">
+                    Seems like the filter parameters don't include any data. Check the filter
+                    parameters and try again...
+                </div>
+            )}
         </div>
     );
 };
