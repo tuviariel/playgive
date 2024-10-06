@@ -38,101 +38,89 @@ const Vaivrach = (props) => {
                 <li>
                     <div>
                         Built and modified code in
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={JS}
-                                alt="JS"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={JS} alt="JS" className="h-5 w-4 ml-auto mr-0.5" />
+                            JavaScript
                         </span>
-                        JavaScript /
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={TS}
-                                alt="TS"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        /
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={TS} alt="TS" className="h-5 w-4 ml-auto mr-0.5" />
+                            TypeScript
                         </span>
-                        TypeScript,
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Html}
-                                alt="HTML"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        ,
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Html} alt="HTML" className="h-5 w-4 ml-auto mr-0.5" />
+                            HTML
                         </span>
-                        HTML,
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Scss}
-                                alt="Scss"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        ,
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Scss} alt="Scss" className="h-5 w-4 ml-auto mr-0.5" />
+                            SCSS
                         </span>
-                        SCSS, on
-                        <span className="w-8 inline-flex">
+                        , on
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
                             <img
                                 src={Angular}
                                 alt="Angular.js"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
+                                className="h-5 w-4 ml-auto mr-0.5"
                             />
+                            Angular.js
                         </span>
-                        Angular.js and
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={ReactLogo}
-                                alt="ReactJS"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        and
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={ReactLogo} alt="ReactJS" className="h-5 w-4 ml-auto mr-0.5" />
+                            React
                         </span>
-                        React on the Front End (~%80), and
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={node}
-                                alt="NodeJS"
-                                className="h-auto w-5 ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        on the Front End (~%80), and
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={node} alt="NodeJS" className="h-auto w-5 ml-auto mr-0.5" />
+                            Node.js
                         </span>
-                        Node.js using
-                        <span className="w-8 inline-flex">
+                        using
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
                             <img
                                 src={Express}
                                 alt="ExpressJS"
-                                className="h-auto w-4 ml-auto mr-0.5 cursor-pointer bg-slate-100"
-                                onClick={() => {}}
+                                className="h-auto w-4 ml-auto mr-0.5 bg-slate-100"
                             />
+                            Express.js
                         </span>
-                        Express.js on the Back End (~%20) to create several digital escape rooms.
+                        on the Back End (~%20) to create several digital escape rooms.
                     </div>
                 </li>
                 <li>
                     <div>
                         Multitasking, prioritizing and managing team communication through
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Trello}
-                                alt="trello"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline "
+                            onClick={() => {}}>
+                            <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
+                            Trello
                         </span>
-                        Trello and{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Jira}
-                                alt="Slack"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        and{" "}
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Jira} alt="Slack" className="h-5 w-4 ml-auto mr-0.5" />
+                            Jira
                         </span>
-                        Jira.
+                        .
                     </div>
                 </li>
             </ul>

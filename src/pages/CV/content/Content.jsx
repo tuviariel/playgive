@@ -1,22 +1,26 @@
 import { useEffect, useState } from "react";
 import TabBar from "./tabBar";
-import CV from "../assets/CV.png";
-import Free from "../assets/ProfilePicturePhoto.jpg";
-import LemindaL from "../assets/leminda.svg";
-import VaivrachL from "../assets/vaivrach.jpg";
-import Beezi from "../assets/BeeziB.svg";
-import Impact from "../assets/impactB.png";
-import Labsuit from "../assets/labsuit.png";
-import JohnBryce from "../assets/JohnBryce.jpg";
-import Moreshet from "../assets/מורשת יעקב.jpeg";
-import WhatsApp from "../assets/whatsapp.svg";
-import Phone from "../assets/phone.svg";
-import Email from "../assets/email.svg";
+// import CV from "../assets/CV.png";
+// import Free from "../assets/ProfilePicturePhoto.jpg";
+// import LemindaL from "../assets/leminda.svg";
+// import VaivrachL from "../assets/vaivrach.jpg";
+// import Beezi from "../assets/BeeziB.svg";
+// import Impact from "../assets/impactB.png";
+// import Labsuit from "../assets/labsuit.png";
+// import JohnBryce from "../assets/JohnBryce.jpg";
+// import Moreshet from "../assets/מורשת יעקב.jpeg";
+// import WhatsApp from "../assets/whatsapp.svg";
+// import Phone from "../assets/phone.svg";
+// import Email from "../assets/email.svg";
 import Terminal from "./terminal";
 import Start from "./start";
 import Timeline from "./timeline";
 import Leminda from "./leminda";
 import Vaivrach from "./vaivrach";
+import Freelance from "./freelance";
+import Labsuit from "./labsuit";
+import Beezi from "./beezi";
+import Impact from "./impact";
 
 export const Content = (props) => {
     const { content, setContent, setActionContent } = props;
@@ -54,18 +58,24 @@ export const Content = (props) => {
             <div className="flex">
                 {content === "welcome" ? (
                     <Start setActionContent={setActionContent} />
-                ) : content === "Free" ? (
-                    <div>Free</div>
+                ) : content === "Freelance" ? (
+                    <Freelance setActionContent={setActionContent} />
                 ) : content === "Leminda.AI" ? (
                     <Leminda setActionContent={setActionContent} />
-                ) : content === "Beezi.app" ? (
-                    <div>Beezi.app</div>
+                ) : content === "Beezi" ? (
+                    <Beezi setActionContent={setActionContent} />
                 ) : content === "Va'ivrach" ? (
                     <Vaivrach setActionContent={setActionContent} />
-                ) : content === "Impact" ? (
-                    <div>Impact</div>
+                ) : content === "Impact by Mati" ? (
+                    <Impact setActionContent={setActionContent} />
                 ) : content === "LabSuit" ? (
-                    <div>Labsuit</div>
+                    <Labsuit setActionContent={setActionContent} />
+                ) : content === "John Bryce" ? (
+                    <Vaivrach setActionContent={setActionContent} />
+                ) : content === "Teco1" ? (
+                    <Impact setActionContent={setActionContent} />
+                ) : content === "Moreshet Ya'akov Collage" ? (
+                    <Labsuit setActionContent={setActionContent} />
                 ) : (
                     <div></div>
                 )}

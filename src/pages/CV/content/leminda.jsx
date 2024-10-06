@@ -9,6 +9,7 @@ import Css from "../assets/css-3.svg";
 import Trello from "../assets/trello.svg";
 import Slack from "../assets/slack.svg";
 import Npm from "../assets/npm.svg";
+import github from "../assets/github.svg";
 
 const Leminda = (props) => {
     const {} = props;
@@ -31,47 +32,43 @@ const Leminda = (props) => {
                 <li className="">
                     <div className="">
                         Developed an SPA (
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={ReactLogo}
-                                alt="React"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={ReactLogo} alt="React" className="h-5 w-4 ml-auto mr-0.5" />
+                            React
                         </span>
-                        React,{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={JS}
-                                alt="JavaScript"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        ,{" "}
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={JS} alt="JavaScript" className="h-5 w-4 ml-auto mr-0.5" />
+                            JavaScript
                         </span>
-                        JavaScript,{" "}
-                        <span className="w-8 inline-flex">
+                        ,{" "}
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
                             <img
                                 src={Tailwind}
                                 alt="Tailwind.css"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
+                                className="h-5 w-4 ml-auto mr-0.5"
                             />
+                            Tailwind.css
                         </span>
-                        Tailwind.css) from scratch until production (paying customers).
+                        ) from scratch until production (paying customers).
                     </div>
                 </li>
                 <li className="">
                     <div>
                         Installed various
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Npm}
-                                alt="NPM"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Npm} alt="NPM" className="h-5 w-4 ml-auto mr-0.5" />
+                            NPM
                         </span>
-                        NPM packages as needed and kept code clean and reusable.
+                        packages as needed and kept code clean and reusable.
                     </div>
                 </li>
                 <li className="">
@@ -81,15 +78,13 @@ const Leminda = (props) => {
                 <li className="">
                     <div className="flex">
                         Designed UI based on
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Figma}
-                                alt="Figma"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Figma} alt="Figma" className="h-5 w-4 ml-auto mr-0.5" />
+                            Figma
                         </span>
-                        Figma mockup with attention to dynamic sized screens (pixel perfect).
+                        mockup with attention to dynamic sized screens (pixel perfect).
                     </div>
                 </li>
                 <li className="">
@@ -102,56 +97,58 @@ const Leminda = (props) => {
                 <li className="">
                     <div className="">
                         Created a Chrome extension: Integrating code into any site's DOM using{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={JS}
-                                alt="JS"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={JS} alt="JS" className="h-5 w-4 ml-auto mr-0.5" />
+                            Vanilla JavaScript
                         </span>
-                        Vanilla JavaScript,{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Html}
-                                alt="HTML"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        ,
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Html} alt="HTML" className="h-5 w-4 ml-auto mr-0.5" />
+                            HTML
                         </span>
-                        HTML and{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Css}
-                                alt="CSS"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        and
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Css} alt="CSS" className="h-5 w-4 ml-auto mr-0.5" />
+                            CSS
                         </span>
-                        CSS, while maintaining communication with the API.
+                        , while maintaining communication with the API.
                     </div>
                 </li>
                 <li className="">
                     <div className="">
                         Communicated with all levels of development through{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Trello}
-                                alt="trello"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
+                            Trello
                         </span>
-                        Trello and{" "}
-                        <span className="w-8 inline-flex">
-                            <img
-                                src={Slack}
-                                alt="Slack"
-                                className="h-5 w-auto ml-auto mr-0.5 cursor-pointer"
-                                onClick={() => {}}
-                            />
+                        and{" "}
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={Slack} alt="Slack" className="h-5 w-4 ml-auto mr-0.5" />
+                            Slack
                         </span>
-                        Slack.
+                        .
+                    </div>
+                </li>{" "}
+                <li>
+                    <div>
+                        Managing source control with
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => {}}>
+                            <img src={github} alt="github" className="h-5 w-4 ml-auto mr-0.5" />
+                            GitHub
+                        </span>
+                        .
                     </div>
                 </li>
             </ul>

@@ -14,11 +14,11 @@ export const Experience = (props) => {
     const { content, setContent } = props;
     const exp = [
         ["Freelance", "2024-today", "Full-Stack Web Developer", 0, "Freelance projects"],
-        ["Leminda.AI", "2022-2023", "Front-End Web Developer", 1, "Full time paying"],
-        ["Beezi.app", "2020", "Front-End Web Developer", 2, "Voluntary project"],
-        ["Va'ivrach", "2017-2021", "Full-Stack Web Developer", 3, "Part time paying"],
+        ["Leminda.AI", "2022-2023", "Front-End Web Developer", 1, "Full time job"],
+        ["Beezi", "2020", "Front-End Web Developer", 2, "Internship project"],
+        ["Va'ivrach", "2017-2021", "Full-Stack Web Developer", 3, "Part time job"],
         ["Impact by Mati", "2016", "Full-Stack Web Developer", 4, "Freelance project"],
-        ["LabSuit", "2014", "QA", 5, "Internship"],
+        ["LabSuit", "2014", "QA", 5, "Internship job"],
     ];
     const [open, setOpen] = useState([false, true, false, true, false, false]);
     console.log(content);
@@ -29,7 +29,7 @@ export const Experience = (props) => {
                     <div
                         key={i}
                         className={`block mt-4 text-gray-400 hover:bg-[#2A2D2E] text-sm ${
-                            content === exp[0] ? "bg-[#37373d]" : ""
+                            content === ex[0] ? "bg-[#37373d]" : "bg-[#252526]"
                         }`}>
                         <div className="flex">
                             <img
