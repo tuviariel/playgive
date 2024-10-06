@@ -20,7 +20,7 @@ export const Experience = (props) => {
         ["Impact by Mati", "2016", "Full-Stack Web Developer", 4, "Freelance project"],
         ["LabSuit", "2014", "QA", 5, "Internship"],
     ];
-    const [open, setOpen] = useState([true, true, true, true, true, true]);
+    const [open, setOpen] = useState([false, true, false, true, false, false]);
     console.log(content);
     return (
         <div className="scrollbar overflow-y-auto h-full">
