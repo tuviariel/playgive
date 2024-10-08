@@ -1,6 +1,7 @@
 import { useState } from "react";
 import arrow from "../../assets/arrow-down.svg";
 import JB from "../../assets/JohnBryce.jpg";
+import Teco from "../../assets/teco.png";
 import Moreshet from "../../assets/מורשת יעקב.jpeg";
 import Work from "../../assets/job.svg";
 import Type from "../../assets/work-type.svg";
@@ -38,20 +39,13 @@ export const Education = (props) => {
                                     })
                                 }
                             />
-                            {ex[3] !== 1 ? (
-                                <img
-                                    src={ex[3] === 0 ? JB : Moreshet}
-                                    alt={ex[0]}
-                                    className="h-8 w-8 bg-slate-100 rounded-md p-0.5 cursor-pointer"
-                                    onClick={() => setContent(ex[0])}
-                                />
-                            ) : (
-                                <div
-                                    className="h-8 w-8 rounded-md cursor-pointer bg-slate-100 text-blue-800 pt-2 text-xs font-bold"
-                                    onClick={() => setContent(ex[0])}>
-                                    Teco1
-                                </div>
-                            )}
+
+                            <img
+                                src={ex[3] === 0 ? JB : ex[3] === 1 ? Teco : Moreshet}
+                                alt={ex[0]}
+                                className="h-8 w-8 bg-slate-100 rounded-md p-0.5 cursor-pointer"
+                                onClick={() => setContent(ex[0])}
+                            />
                             <div
                                 className="font-bold cursor-pointer ml-2 my-auto"
                                 onClick={() => setContent(ex[0])}>

@@ -6,6 +6,7 @@ import Impact from "../assets/impactB.png";
 import Labsuit from "../assets/labsuit.png";
 import JohnBryce from "../assets/JohnBryce.jpg";
 import Moreshet from "../assets/מורשת יעקב.jpeg";
+import Teco from "../assets/teco.png";
 const Timeline = (props) => {
     const {} = props;
     return (
@@ -53,9 +54,7 @@ const Timeline = (props) => {
             </div>
             <div className="flex">
                 <div className=" ml-auto my-auto">2014</div>
-                <div className="h-8 w-8 rounded-full m-2 bg-white text-blue-800 pt-2 text-xs font-bold">
-                    Teco1
-                </div>
+                <img src={Teco} alt="Teco-1" className="h-8 w-8 rounded-full m-2" />
             </div>
             <div className="flex">
                 <div className="my-auto ml-auto">2011-2014</div>

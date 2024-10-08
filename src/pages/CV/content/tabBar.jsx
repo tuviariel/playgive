@@ -10,6 +10,7 @@ import Impact from "../assets/impactB.png";
 import Labsuit from "../assets/labsuit.png";
 import JohnBryce from "../assets/JohnBryce.jpg";
 import Moreshet from "../assets/מורשת יעקב.jpeg";
+import Teco from "../assets/teco.png";
 const TabBar = (props) => {
     const { openNav, closeTag, content, setContent } = props;
     return (
@@ -35,7 +36,13 @@ const TabBar = (props) => {
                                         ? Vaivrach
                                         : item === "Impact by Mati"
                                         ? Impact
-                                        : Labsuit
+                                        : item === "Labsuit"
+                                        ? Labsuit
+                                        : item === "Teco1"
+                                        ? Teco
+                                        : item === "John Bryce"
+                                        ? JohnBryce
+                                        : Moreshet
                                 }
                                 alt={item}
                                 className="mr-2 h-4 w-4 my-auto bg-slate-100 rounded-md"

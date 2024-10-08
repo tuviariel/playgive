@@ -21,6 +21,9 @@ import Freelance from "./freelance";
 import Labsuit from "./labsuit";
 import Beezi from "./beezi";
 import Impact from "./impact";
+import JB from "./johnBryce";
+import Teco from "./Teco1";
+import Moreshet from "./Moreshet";
 
 export const Content = (props) => {
     const { content, setContent, setActionContent } = props;
@@ -71,11 +74,11 @@ export const Content = (props) => {
                 ) : content === "LabSuit" ? (
                     <Labsuit setActionContent={setActionContent} />
                 ) : content === "John Bryce" ? (
-                    <Vaivrach setActionContent={setActionContent} />
+                    <JB setActionContent={setActionContent} />
                 ) : content === "Teco1" ? (
-                    <Impact setActionContent={setActionContent} />
+                    <Teco setActionContent={setActionContent} />
                 ) : content === "Moreshet Ya'akov Collage" ? (
-                    <Labsuit setActionContent={setActionContent} />
+                    <Moreshet setActionContent={setActionContent} />
                 ) : (
                     <div></div>
                 )}
