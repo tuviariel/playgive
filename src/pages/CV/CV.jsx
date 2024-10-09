@@ -14,7 +14,7 @@ const CV = () => {
         if (skill > 0) {
             setTimeout(() => {
                 setSkill(0);
-            }, 500);
+            }, 1500);
         }
     }, [skill]);
     return (

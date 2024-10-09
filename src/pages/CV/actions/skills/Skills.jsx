@@ -39,7 +39,7 @@ export const Skills = (props) => {
         ["Express.js", 2, express, 12],
         ["Python", 1, python, 24],
         ["Java", 1, java, 23],
-        ["Figma", 6, figma, 9],
+        ["Figma", 3, figma, 9],
         ["Zeplin", 1, zeplin, 25],
         ["SQL", 2, sql, 17],
         ["NoSQL", 5, nosql, 15],

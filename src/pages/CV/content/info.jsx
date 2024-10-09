@@ -26,7 +26,9 @@ const Info = (props) => {
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex mb-3">
                 <img src={InfoLogo} alt="Info" className="h-10 w-10 mr-2" />
-                <div className="text-2xl">More Information</div>
+                <div className="text-2xl">
+                    More Information <span className="text-lg">[Updated at 10/2024]</span>
+                </div>
             </div>
             <div className="text-xl mb-1 text-cyan-600">A CV Summary:</div>
             <ul className="list-disc text-base mb-3 w-full">

@@ -12,14 +12,19 @@ const Timeline = (props) => {
     return (
         <div
             className={`relative min-w-36 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] ${
-                skill !== 0 ? "border-yellow-500" : ""
+                // skill !== 0 ? "border-yellow-500" : ""
+                ""
             }`}>
             {/* <div className="bg-gradient-to-br from-fuchsia-800 to-[#1e1e1e] to-70% mx-auto rotate-45 translate-x-1/4 h-4 w-4"></div> */}
             <div
                 className={`absolute left-[50%] top-0 opacity-35 bg-fuchsia-800 mx-auto h-full w-1 z-10 ${
-                    skill !== 0 ? "bg-yellow-500" : "bg-fuchsia-800"
+                    // skill !== 0 ? "bg-yellow-500" : "bg-fuchsia-800"
+                    ""
                 }`}></div>
-            <div className="mt-8 mb-2 ml-2 underline text-white text-xs">
+            <div
+                className={`mt-8 mb-2 ml-2 underline text-xs ${
+                    skill !== 0 ? "text-yellow-500" : "text-fuchsia-200"
+                }`}>
                 Professional timeline:
             </div>
             <div className="flex mt-6">
