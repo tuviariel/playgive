@@ -12,7 +12,7 @@ const Impact = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
-                <img src={ImpactLogo} alt="Impact" className="h-10 w-10" />
+                <img src={ImpactLogo} alt="Impact" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Impact by Mati</div>
                 <a href="https://impact-98ffa.web.app/" target="_blank" className="text-xs flex">
                     <img
@@ -32,7 +32,7 @@ const Impact = (props) => {
             <ul className="list-disc text-base mb-12 w-full">
                 <li>
                     <div>
-                        Building reusable components in{" "}
+                        Building reusable components in
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
                             onClick={() => setSkill(2)}>
@@ -51,7 +51,7 @@ const Impact = (props) => {
                 </li>
                 <li>
                     <div>
-                        Designing UX/UI with{" "}
+                        Designing UX/UI with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
                             onClick={() => setSkill(14)}>

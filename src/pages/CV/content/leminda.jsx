@@ -16,7 +16,7 @@ const Leminda = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12">
             <div className="flex mb-4">
-                <img src={LemindaLogo} alt="Leminda.AI" className="h-10 w-10" />
+                <img src={LemindaLogo} alt="Leminda.AI" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Leminda.AI</div>
                 <a href="https://research.leminda.com" target="_blank">
                     <img src={globe} alt="https://research.leminda.com" className="ml-4 h-4 w-4" />
@@ -96,7 +96,7 @@ const Leminda = (props) => {
                 </li>
                 <li className="">
                     <div className="">
-                        Created a Chrome extension: Integrating code into any site's DOM using{" "}
+                        Created a Chrome extension: Integrating code into any site's DOM using
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
                             onClick={() => setSkill(3)}>
@@ -122,14 +122,14 @@ const Leminda = (props) => {
                 </li>
                 <li className="">
                     <div className="">
-                        Communicated with all levels of development through{" "}
+                        Communicated with all levels of development through
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
                             onClick={() => setSkill(7)}>
                             <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>
-                        and{" "}
+                        and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
                             onClick={() => setSkill(19)}>
@@ -138,7 +138,7 @@ const Leminda = (props) => {
                         </span>
                         .
                     </div>
-                </li>{" "}
+                </li>
                 <li>
                     <div>
                         Managing source control with

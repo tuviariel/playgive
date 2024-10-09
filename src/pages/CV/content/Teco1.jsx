@@ -2,15 +2,15 @@ import Jira from "../assets/jira.svg";
 import SQL from "../assets/sql.svg";
 import python from "../assets/python.svg";
 import Trello from "../assets/trello.svg";
+import TecoLogo from "../assets/teco.png";
 
 const Teco = (props) => {
     const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
-                <div className="h-10 w-10 bg-slate-100 text-blue-800 text-xs flex font-bold pt-3 pl-0.5 mr-1">
-                    Teco-1
-                </div>
+                <img src={TecoLogo} alt="Teco-1" className="h-10 w-10 mr-2" />
+
                 <div className="text-2xl">Teco-1</div>
             </div>
             <div className="mb-6">
@@ -63,7 +63,7 @@ const Teco = (props) => {
                             onClick={() => setSkill(24)}>
                             <img src={python} alt="Python" className="h-5 w-4 ml-auto mr-0.5" />
                             Python
-                        </span>{" "}
+                        </span>
                         and Linux.
                     </div>
                 </li>

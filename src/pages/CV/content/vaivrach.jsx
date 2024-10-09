@@ -15,7 +15,7 @@ const Vaivrach = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
-                <img src={VaivrachLogo} alt="Va'ivrach" className="h-10 w-10" />
+                <img src={VaivrachLogo} alt="Va'ivrach" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Va'ivrach</div>
                 {/* <a href="https://research.leminda.com" target="_blank">
                     <img src={globe} alt="https://research.leminda.com" className="ml-4 h-4 w-4" />
@@ -113,7 +113,7 @@ const Vaivrach = (props) => {
                             <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>
-                        and{" "}
+                        and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
                             onClick={() => setSkill(21)}>

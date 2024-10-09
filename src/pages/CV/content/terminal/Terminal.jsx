@@ -11,10 +11,10 @@ export const Terminal = () => {
                 <span className="text-cyan-600">(input "npm start" to begin):</span>
             </div>
             <div className="flex text-white">
-                ${" "}
+                $
                 <input
                     type="text"
-                    className="bg-[#1e1e1e] w-full focus:outline-none ml-1"
+                    className="bg-[#1e1e1e] w-full focus:outline-none ml-2"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="|_|"

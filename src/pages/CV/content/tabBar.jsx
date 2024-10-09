@@ -24,25 +24,23 @@ const TabBar = (props) => {
                             } min-w-fit w-fit px-2 h-7 mt-auto text-gray-300 flex border border-[#515151] cursor-pointer`}>
                             <img
                                 src={
-                                    item === "welcome"
-                                        ? Free
-                                        : item === "Freelance"
-                                        ? Free
-                                        : item === "Leminda.AI"
+                                    item === "Leminda.AI"
                                         ? Leminda
-                                        : item === "Beezi.app"
+                                        : item === "Beezi"
                                         ? Beezi
                                         : item === "Va'ivrach"
                                         ? Vaivrach
                                         : item === "Impact by Mati"
                                         ? Impact
-                                        : item === "Labsuit"
+                                        : item === "LabSuit"
                                         ? Labsuit
                                         : item === "Teco1"
                                         ? Teco
                                         : item === "John Bryce"
                                         ? JohnBryce
-                                        : Moreshet
+                                        : item === "Moreshet"
+                                        ? Moreshet
+                                        : Free
                                 }
                                 alt={item}
                                 className="mr-2 h-4 w-4 my-auto bg-slate-100 rounded-md"
@@ -53,7 +51,7 @@ const TabBar = (props) => {
                             </div>
                             {item !== "welcome" && (
                                 <div
-                                    className="ml-2 my-auto text-sm hover:bg-slate-600 rounded-md p-0.5 cursor-pointer"
+                                    className="ml-2 mb-auto text-sm hover:bg-slate-600 rounded-md p-0.5 cursor-pointer"
                                     onClick={() => closeTag(item)}>
                                     x
                                 </div>

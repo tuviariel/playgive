@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import angular from "../../assets/angular.svg";
 import react from "../../assets/react.svg";
 import python from "../../assets/python.svg";
@@ -25,8 +25,8 @@ import github from "../../assets/github.svg";
 import gitlab from "../../assets/gitlab.svg";
 
 export const Skills = (props) => {
-    const { setSkill } = props;
-    const skills = [
+    const { setSkill, by } = props;
+    const [skills, setSkills] = useState([
         ["React", 6, react, 2],
         ["JavaScript", 7, js, 3],
         ["TypeScript", 3, ts, 4],
@@ -51,9 +51,23 @@ export const Skills = (props) => {
         ["NPM", 1, npm, 6],
         ["GitHub", 6, github, 5],
         ["GitLab", 1, gitlab, 20],
-    ];
+    ]);
 
-    // console.log(content);
+    useEffect(() => {
+        by !== "" && sort();
+    }, [by]);
+
+    const sort = () => {
+        let temp = skills;
+        if (by === "ascent") {
+            temp.sort();
+        } else if (by === "experience") {
+            temp.sort((a, b) => {
+                return b[1] - a[1];
+            });
+        }
+        setSkills([...temp]);
+    };
     return (
         <div className="scrollbar overflow-y-auto h-full">
             {skills.map((ex, i) => {
@@ -63,6 +77,7 @@ export const Skills = (props) => {
                         className={`flex py-2 ml-2 text-gray-400 hover:bg-[#2A2D2E] cursor-pointer text-sm h-10 ${
                             i === skills.length - 1 ? "mb-8" : ""
                         }`}
+                        title="notice the timeline when clicking..."
                         onClick={() => setSkill(ex[3])}>
                         <img src={ex[2]} alt={ex[0]} className="h-8 w-8 bg-slate-100 rounded-md" />
                         <div className="block ml-2">

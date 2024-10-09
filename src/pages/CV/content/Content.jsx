@@ -12,7 +12,7 @@ import Impact from "./impact";
 import JB from "./johnBryce";
 import Teco from "./Teco1";
 import Moreshet from "./Moreshet";
-import Info from "./react";
+import Info from "./info";
 
 export const Content = (props) => {
     const { content, setContent, setActionContent, setSkill, skill } = props;
@@ -38,7 +38,7 @@ export const Content = (props) => {
         setRerender(!rerender);
     };
 
-    console.log(openNav);
+    // console.log(openNav);
     return (
         <div className="block">
             <TabBar
@@ -69,8 +69,8 @@ export const Content = (props) => {
                         <Teco setSkill={setSkill} />
                     ) : content === "Moreshet Ya'akov Collage" ? (
                         <Moreshet setSkill={setSkill} />
-                    ) : content.endsWith("React") ? (
-                        <Info setContent={setContent} />
+                    ) : content === "More Information" ? (
+                        <Info setSkill={setSkill} />
                     ) : (
                         <></>
                     )}

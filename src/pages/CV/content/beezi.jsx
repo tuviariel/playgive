@@ -12,7 +12,7 @@ const Beezi = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
-                <img src={BeeziLogo} alt="Beezi" className="h-10 w-10" />
+                <img src={BeeziLogo} alt="Beezi" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Beezi</div>
             </div>
             <div className="mb-6">

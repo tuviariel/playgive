@@ -13,7 +13,7 @@ const Freelance = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
-                <img src={FreeLogo} alt="Freelance" className="h-10 w-10" />
+                <img src={FreeLogo} alt="Freelance" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Freelance</div>
             </div>
             <div className="mb-6">

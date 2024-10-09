@@ -6,7 +6,7 @@ const Labsuit = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
-                <img src={LabsuitLogo} alt="LabSuit" className="h-10 w-10" />
+                <img src={LabsuitLogo} alt="LabSuit" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">LabSuit</div>
                 {/* <a href="https://research.leminda.com" target="_blank">
                     <img src={globe} alt="https://research.leminda.com" className="ml-4 h-4 w-4" />
