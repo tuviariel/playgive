@@ -1,6 +1,7 @@
 import MoreshetLogo from "../assets/מורשת יעקב.jpeg";
 
-const Moreshet = () => {
+const Moreshet = (props) => {
+    const { setContent } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">

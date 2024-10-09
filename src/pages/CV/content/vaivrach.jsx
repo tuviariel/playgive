@@ -11,7 +11,7 @@ import Trello from "../assets/trello.svg";
 import Jira from "../assets/jira.svg";
 
 const Vaivrach = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
@@ -40,35 +40,35 @@ const Vaivrach = (props) => {
                         Built and modified code in
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(3)}>
                             <img src={JS} alt="JS" className="h-5 w-4 ml-auto mr-0.5" />
                             JavaScript
                         </span>
                         /
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(4)}>
                             <img src={TS} alt="TS" className="h-5 w-4 ml-auto mr-0.5" />
                             TypeScript
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(13)}>
                             <img src={Html} alt="HTML" className="h-5 w-4 ml-auto mr-0.5" />
                             HTML
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(16)}>
                             <img src={Scss} alt="Scss" className="h-5 w-4 ml-auto mr-0.5" />
                             SCSS
                         </span>
                         , on
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(22)}>
                             <img
                                 src={Angular}
                                 alt="Angular.js"
@@ -79,21 +79,21 @@ const Vaivrach = (props) => {
                         and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(2)}>
                             <img src={ReactLogo} alt="ReactJS" className="h-5 w-4 ml-auto mr-0.5" />
                             React
                         </span>
                         on the Front End (~%80), and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(11)}>
                             <img src={node} alt="NodeJS" className="h-auto w-5 ml-auto mr-0.5" />
                             Node.js
                         </span>
                         using
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(12)}>
                             <img
                                 src={Express}
                                 alt="ExpressJS"
@@ -109,14 +109,14 @@ const Vaivrach = (props) => {
                         Multitasking, prioritizing and managing team communication through
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline "
-                            onClick={() => {}}>
+                            onClick={() => setSkill(7)}>
                             <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>
                         and{" "}
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(21)}>
                             <img src={Jira} alt="Slack" className="h-5 w-4 ml-auto mr-0.5" />
                             Jira
                         </span>

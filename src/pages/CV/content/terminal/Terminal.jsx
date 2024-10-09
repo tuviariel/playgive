@@ -3,7 +3,7 @@ import { useState } from "react";
 export const Terminal = () => {
     const [input, setInput] = useState("");
     return (
-        <div className="border border-t-2 border-[#383838] h-64">
+        <div className="border border-t-2 border-[#383838] h-64 min-h-28">
             <div className="text-base">
                 <span className="text-green-600 mr-1">Terminal@Offer-Development-Job</span>
                 <span className="text-fuchsia-600 mr-1">atMyCompany</span>

@@ -3,6 +3,7 @@ import EducationLink from "../assets/educationLink.svg";
 import SkillsLink from "../assets/skillsLink.svg";
 import InfoLink from "../assets/infoLink.svg";
 const Start = (props) => {
+    const { setActionContent } = props;
     return (
         <div className="text-slate-50 ml-12 my-10">
             <div className="text-xl">Welcome to My CV Site</div>
@@ -22,25 +23,25 @@ const Start = (props) => {
             <div className="text-xs">
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
-                    onClick={() => props.setActionContent("experience")}>
+                    onClick={() => setActionContent("experience")}>
                     <img src={ExperienceLink} alt="Experience" className="h-5 w-5 mr-4" />
                     Experience...
                 </div>
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
-                    onClick={() => props.setActionContent("education")}>
+                    onClick={() => setActionContent("education")}>
                     <img src={EducationLink} alt="Education" className="h-5 w-5 mr-4" />
                     Education...
                 </div>
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
-                    onClick={() => props.setActionContent("skills")}>
+                    onClick={() => setActionContent("skills")}>
                     <img src={SkillsLink} alt="Skills" className="h-5 w-5 mr-4" />
                     Skills...
                 </div>
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
-                    onClick={() => props.setActionContent("information")}>
+                    onClick={() => setActionContent("information")}>
                     <img src={InfoLink} alt="Info" className="h-5 w-5 mr-4" />
                     More Information...
                 </div>

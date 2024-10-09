@@ -4,7 +4,7 @@ import Education from "./education";
 import Skills from "./skills";
 import Information from "./skills";
 export const Actions = (props) => {
-    const { action, content, setContent } = props;
+    const { action, content, setContent, setSkill } = props;
     return (
         <>
             <Title name={action} />
@@ -14,7 +14,7 @@ export const Actions = (props) => {
                 ) : action === "education" ? (
                     <Education content={content} setContent={setContent} />
                 ) : action === "skills" ? (
-                    <Skills />
+                    <Skills setSkill={setSkill} />
                 ) : action === "information" ? (
                     <Information />
                 ) : action === "search" ? (

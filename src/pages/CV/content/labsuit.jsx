@@ -2,7 +2,7 @@ import LabsuitLogo from "../assets/labsuit.png";
 import Trello from "../assets/trello.svg";
 
 const Labsuit = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
@@ -30,7 +30,7 @@ const Labsuit = (props) => {
                         Bug management from first report to development until completion, in
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(7)}>
                             <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>

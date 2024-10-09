@@ -12,7 +12,7 @@ import Npm from "../assets/npm.svg";
 import github from "../assets/github.svg";
 
 const Leminda = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12">
             <div className="flex mb-4">
@@ -34,21 +34,21 @@ const Leminda = (props) => {
                         Developed an SPA (
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(2)}>
                             <img src={ReactLogo} alt="React" className="h-5 w-4 ml-auto mr-0.5" />
                             React
                         </span>
-                        ,{" "}
+                        ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(3)}>
                             <img src={JS} alt="JavaScript" className="h-5 w-4 ml-auto mr-0.5" />
                             JavaScript
                         </span>
-                        ,{" "}
+                        ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(8)}>
                             <img
                                 src={Tailwind}
                                 alt="Tailwind.css"
@@ -64,7 +64,7 @@ const Leminda = (props) => {
                         Installed various
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(6)}>
                             <img src={Npm} alt="NPM" className="h-5 w-4 ml-auto mr-0.5" />
                             NPM
                         </span>
@@ -80,7 +80,7 @@ const Leminda = (props) => {
                         Designed UI based on
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(9)}>
                             <img src={Figma} alt="Figma" className="h-5 w-4 ml-auto mr-0.5" />
                             Figma
                         </span>
@@ -99,21 +99,21 @@ const Leminda = (props) => {
                         Created a Chrome extension: Integrating code into any site's DOM using{" "}
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(3)}>
                             <img src={JS} alt="JS" className="h-5 w-4 ml-auto mr-0.5" />
                             Vanilla JavaScript
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(13)}>
                             <img src={Html} alt="HTML" className="h-5 w-4 ml-auto mr-0.5" />
                             HTML
                         </span>
                         and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(14)}>
                             <img src={Css} alt="CSS" className="h-5 w-4 ml-auto mr-0.5" />
                             CSS
                         </span>
@@ -125,14 +125,14 @@ const Leminda = (props) => {
                         Communicated with all levels of development through{" "}
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(7)}>
                             <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>
                         and{" "}
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(19)}>
                             <img src={Slack} alt="Slack" className="h-5 w-4 ml-auto mr-0.5" />
                             Slack
                         </span>
@@ -144,8 +144,12 @@ const Leminda = (props) => {
                         Managing source control with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
-                            <img src={github} alt="github" className="h-5 w-4 ml-auto mr-0.5" />
+                            onClick={() => setSkill(5)}>
+                            <img
+                                src={github}
+                                alt="github"
+                                className="h-5 w-4 ml-auto mr-0.5 bg-white rounded-full"
+                            />
                             GitHub
                         </span>
                         .

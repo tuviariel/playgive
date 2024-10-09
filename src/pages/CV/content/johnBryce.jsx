@@ -5,9 +5,10 @@ import Css from "../assets/css-3.svg";
 import Angular from "../assets/angular.svg";
 import JS from "../assets/js.svg";
 import Java from "../assets/java.svg";
+import github from "../assets/github.svg";
 
 const JB = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
@@ -27,7 +28,7 @@ const JB = (props) => {
                     <div>
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(23)}>
                             <img
                                 src={Java}
                                 alt="Java"
@@ -39,7 +40,7 @@ const JB = (props) => {
                         implementing with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(17)}>
                             <img src={SQL} alt="SQL" className="h-5 w-4 ml-auto mr-0.5" />
                             MySQL
                         </span>
@@ -51,30 +52,46 @@ const JB = (props) => {
                         Client-side techs:
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(13)}>
                             <img src={Html} alt="HTML" className="h-5 w-4 ml-auto mr-0.5" />
                             HTML
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(3)}>
                             <img src={JS} alt="JavaScript" className="h-5 w-4 ml-auto mr-0.5" />
                             JavaScript
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(14)}>
                             <img src={Css} alt="CSS" className="h-5 w-4 ml-auto mr-0.5" />
                             CSS
                         </span>
                         , and how they merge in
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(22)}>
                             <img src={Angular} alt="AngularJS" className="h-5 w-4 ml-auto mr-0.5" />
                             AngularJS
+                        </span>
+                        .
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Managing source control with
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => setSkill(5)}>
+                            <img
+                                src={github}
+                                alt="github"
+                                className="h-5 w-4 ml-auto mr-0.5 bg-white rounded-full"
+                            />
+                            GitHub
                         </span>
                         .
                     </div>

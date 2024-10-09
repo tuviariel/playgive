@@ -9,7 +9,7 @@ import Trello from "../assets/trello.svg";
 import github from "../assets/github.svg";
 
 const Freelance = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
@@ -29,14 +29,14 @@ const Freelance = (props) => {
                         Creating web applications using
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(2)}>
                             <img src={ReactLogo} alt="ReactJS" className="h-5 w-4 ml-auto mr-0.5" />
                             React
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(8)}>
                             <img
                                 src={Tailwind}
                                 alt="Tailwind.css"
@@ -47,7 +47,7 @@ const Freelance = (props) => {
                         , and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(4)}>
                             <img src={TS} alt="TS" className="h-5 w-4 ml-auto mr-0.5" />
                             TypeScript
                         </span>
@@ -59,14 +59,14 @@ const Freelance = (props) => {
                         Building back-end with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(11)}>
                             <img src={node} alt="NodeJS" className="h-5 w-4 ml-auto mr-0.5" />
                             Node.js
                         </span>
                         using
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(12)}>
                             <img
                                 src={Express}
                                 alt="ExpressJS"
@@ -77,7 +77,7 @@ const Freelance = (props) => {
                         while connecting to
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(10)}>
                             <img src={Mongo} alt="Mongo" className="h-5 w-4 ml-auto mr-0.5" />
                             MongoDB
                         </span>
@@ -89,7 +89,7 @@ const Freelance = (props) => {
                         Multitasking, prioritizing and managing schedule with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(7)}>
                             <img src={Trello} alt="trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>
@@ -110,8 +110,12 @@ const Freelance = (props) => {
                         Managing source control with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
-                            <img src={github} alt="github" className="h-5 w-4 ml-auto mr-0.5" />
+                            onClick={() => setSkill(5)}>
+                            <img
+                                src={github}
+                                alt="github"
+                                className="h-5 w-4 ml-auto mr-0.5 bg-white rounded-full"
+                            />
                             GitHub
                         </span>
                         .

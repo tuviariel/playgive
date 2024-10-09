@@ -4,7 +4,7 @@ import python from "../assets/python.svg";
 import Trello from "../assets/trello.svg";
 
 const Teco = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
@@ -34,14 +34,14 @@ const Teco = (props) => {
                         Reporting and managing Bugs until solution with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(21)}>
                             <img src={Jira} alt="Jira" className="h-5 w-4 ml-auto mr-0.5" />
                             JIRA
                         </span>
                         and
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(7)}>
                             <img src={Trello} alt="Trello" className="h-5 w-4 ml-auto mr-0.5" />
                             Trello
                         </span>
@@ -53,14 +53,14 @@ const Teco = (props) => {
                         Introduction to
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(17)}>
                             <img src={SQL} alt="SQL" className="h-5 w-4 ml-auto mr-0.5" />
                             SQL
                         </span>
                         ,
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(24)}>
                             <img src={python} alt="Python" className="h-5 w-4 ml-auto mr-0.5" />
                             Python
                         </span>{" "}

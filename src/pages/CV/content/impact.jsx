@@ -8,7 +8,7 @@ import globe from "../assets/globe.svg";
 import github from "../assets/github.svg";
 
 const Impact = (props) => {
-    const {} = props;
+    const { setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
             <div className="flex">
@@ -35,14 +35,14 @@ const Impact = (props) => {
                         Building reusable components in{" "}
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(2)}>
                             <img src={ReactLogo} alt="ReactJS" className="h-5 w-4 ml-auto mr-0.5" />
                             React
                         </span>
                         from scratch using
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(3)}>
                             <img src={JS} alt="JS" className="h-5 w-4 ml-auto mr-0.5" />
                             JavaScript
                         </span>
@@ -54,7 +54,7 @@ const Impact = (props) => {
                         Designing UX/UI with{" "}
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(14)}>
                             <img src={Css} alt="Css" className="h-5 w-4 ml-auto mr-0.5" />
                             CSS
                         </span>
@@ -66,14 +66,14 @@ const Impact = (props) => {
                         Deployed the application to Google's
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(18)}>
                             <img src={FireBase} alt="FireBase" className="h-5 w-4 ml-auto mr-0.5" />
                             Fire-Base
                         </span>
                         using their
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
+                            onClick={() => setSkill(15)}>
                             <img src={NoSQL} alt="NoSQL" className="h-5 w-4 ml-auto mr-0.5" />
                             NoSQL
                         </span>
@@ -85,8 +85,12 @@ const Impact = (props) => {
                         Managing source control with
                         <span
                             className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => {}}>
-                            <img src={github} alt="github" className="h-5 w-4 ml-auto mr-0.5" />
+                            onClick={() => setSkill(5)}>
+                            <img
+                                src={github}
+                                alt="github"
+                                className="h-5 w-4 ml-auto mr-0.5 bg-white rounded-full"
+                            />
                             GitHub
                         </span>
                         .

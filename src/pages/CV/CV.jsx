@@ -8,6 +8,7 @@ import Content from "./content";
 const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
     const [content, setContent] = useState("welcome");
+    const [skill, setSkill] = useState(0);
     const tooltips = [
         "experience",
         "education",
@@ -16,6 +17,13 @@ const CV = () => {
         // "location",
         "information",
     ];
+    useEffect(() => {
+        if (skill > 0) {
+            setTimeout(() => {
+                setSkill(0);
+            }, 2500);
+        }
+    }, [skill]);
     return (
         <div className="h-screen overflow-hidden">
             <div className="bg-[#3c3c3c] h-[8%] w-full p-3 flex text-gray-300">
@@ -41,13 +49,20 @@ const CV = () => {
                     })}
                 </div>
                 <div className="w-80 bg-[#252526]">
-                    <Actions action={actionContent} content={content} setContent={setContent} />
+                    <Actions
+                        action={actionContent}
+                        content={content}
+                        setContent={setContent}
+                        setSkill={setSkill}
+                    />
                 </div>
                 <div className="w-full bg-[#1e1e1e]">
                     <Content
                         content={content}
                         setContent={setContent}
                         setActionContent={setActionContent}
+                        skill={skill}
+                        setSkill={setSkill}
                     />
                 </div>
             </div>
