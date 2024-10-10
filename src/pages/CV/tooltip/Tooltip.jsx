@@ -5,8 +5,8 @@ import skillsIcon from "./assets/skills.svg";
 import experienceHover from "./assets/workHover.svg";
 import educationHover from "./assets/educationHover.svg";
 import skillsHover from "./assets/skillsHover.svg";
-import infoHover from "./assets/infoHover.svg";
-import infoIcon from "./assets/info.svg";
+import summaryHover from "./assets/summaryHover.svg";
+import summaryIcon from "./assets/summary.svg";
 
 export const Tooltip = (props) => {
     const { current, actionContent, setActionContent, setContent } = props;
@@ -19,8 +19,8 @@ export const Tooltip = (props) => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={() =>
-                actionContent === "information"
-                    ? setContent("More Information")
+                actionContent === "summary"
+                    ? setContent("summary")
                     : setActionContent(actionContent)
             }>
             <img
@@ -37,10 +37,10 @@ export const Tooltip = (props) => {
                         ? hover || current === "skills"
                             ? skillsHover
                             : skillsIcon
-                        : actionContent === "information"
-                        ? hover || current === "information"
-                            ? infoHover
-                            : infoIcon
+                        : actionContent === "summary"
+                        ? hover || current === "summary"
+                            ? summaryHover
+                            : summaryIcon
                         : ""
                 }
                 alt={"my-" + actionContent}

@@ -15,6 +15,7 @@ export const Education = (props) => {
         ["Moreshet Ya'akov Collage", "2011 - 2014", "BEd", 2],
     ];
     const [open, setOpen] = useState([true, false, false]);
+    const [rerender, setRerender] = useState();
     // console.log(content);
     return (
         <div className="scrollbar overflow-y-auto h-full">
@@ -32,12 +33,13 @@ export const Education = (props) => {
                                 className={`h-6 w-6 mt-2 cursor-pointer ${
                                     open[i] ? "" : "-rotate-90"
                                 }`}
-                                onClick={() =>
+                                onClick={() => {
                                     setOpen((prev) => {
                                         let item = !prev[i];
                                         return [...prev, (prev[i] = item)];
-                                    })
-                                }
+                                    });
+                                    setRerender(!rerender);
+                                }}
                             />
 
                             <img

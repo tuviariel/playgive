@@ -2,7 +2,6 @@ import Title from "./title";
 import Experience from "./experience";
 import Education from "./education";
 import Skills from "./skills";
-import Information from "./skills";
 import { useState } from "react";
 export const Actions = (props) => {
     const { action, content, setContent, setSkill } = props;
@@ -17,10 +16,6 @@ export const Actions = (props) => {
                     <Education content={content} setContent={setContent} />
                 ) : action === "skills" ? (
                     <Skills setSkill={setSkill} by={by} />
-                ) : action === "information" ? (
-                    <Information />
-                ) : action === "search" ? (
-                    ""
                 ) : (
                     ""
                 )}

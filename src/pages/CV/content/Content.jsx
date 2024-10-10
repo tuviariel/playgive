@@ -16,7 +16,7 @@ import Info from "./info";
 
 export const Content = (props) => {
     const { content, setContent, setActionContent, setSkill, skill } = props;
-    const [openNav, setOpenNav] = useState(["welcome"]);
+    const [openNav, setOpenNav] = useState(["welcome", "summary"]);
     const [rerender, setRerender] = useState();
 
     useEffect(() => {
@@ -50,7 +50,11 @@ export const Content = (props) => {
             <div className="flex max-h-[550px]">
                 <div className="scrollbar overflow-y-auto">
                     {content === "welcome" ? (
-                        <Start setActionContent={setActionContent} setSkill={setSkill} />
+                        <Start
+                            setActionContent={setActionContent}
+                            setSkill={setSkill}
+                            setContent={setContent}
+                        />
                     ) : content === "Freelance" ? (
                         <Freelance setSkill={setSkill} />
                     ) : content === "Leminda.AI" ? (
@@ -69,7 +73,7 @@ export const Content = (props) => {
                         <Teco setSkill={setSkill} />
                     ) : content === "Moreshet Ya'akov Collage" ? (
                         <Moreshet setSkill={setSkill} />
-                    ) : content === "More Information" ? (
+                    ) : content === "summary" ? (
                         <Info setSkill={setSkill} />
                     ) : (
                         <></>

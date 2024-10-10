@@ -1,12 +1,12 @@
 import ExperienceLink from "../assets/experinceLink.svg";
 import EducationLink from "../assets/educationLink.svg";
 import SkillsLink from "../assets/skillsLink.svg";
-import InfoLink from "../assets/infoLink.svg";
+import SummaryLink from "../assets/summaryLink.svg";
 import MyLinks from "./myLinks";
 import VSCode from "../assets/vs-code.svg";
 
 const Start = (props) => {
-    const { setActionContent, setSkill } = props;
+    const { setActionContent, setSkill, setContent } = props;
     return (
         <div className="text-slate-50 ml-12 my-10">
             <div className="text-xl">Welcome to my CV site</div>
@@ -57,9 +57,9 @@ const Start = (props) => {
                 </div>
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
-                    onClick={() => setActionContent("information")}>
-                    <img src={InfoLink} alt="Info" className="h-5 w-5 mr-4" />
-                    More Information...
+                    onClick={() => setContent("summary")}>
+                    <img src={SummaryLink} alt="Summary" className="h-5 w-5 mr-4" />
+                    Summary...
                 </div>
             </div>
             <div className="text-base mt-8 mb-1">Links</div>
@@ -87,6 +87,17 @@ const Start = (props) => {
                         href="https://wa.me/972509315511?text=Hey%20Tuvia%2C%20I%27d%20like%20to%20interest%20you%20in%20a%20job%20at..."
                         target="_blank">
                         https://wa.me/972509315511
+                    </a>
+                </div>
+                <div className="flex">
+                    <a
+                        href="tel:+972-50-931-5511"
+                        target="_blank"
+                        className="text-[#3094DB] cursor-pointer mr-4">
+                        Phone Call
+                    </a>
+                    <a href="tel:+972-50-931-5511" target="_blank">
+                        tel:+972-50-931-5511
                     </a>
                 </div>
             </div>

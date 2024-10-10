@@ -20,8 +20,8 @@ const Freelance = (props) => {
                 <span className="text-fuchsia-600 mr-2">2023 - Today</span>
                 <span className="text-yellow-500 mr-2">Full-Stack Web Developer</span>as a
                 Freelancer, due to the war brake-out, while living up north I'v decided not to
-                search for a new Job just yet and instead put more energy in family and community
-                while learning more technologies and working on some projects for a living.
+                search for a new Job just yet and instead put more energy learning more technologies
+                and working on some projects for a living.
             </div>
             <ul className="list-disc text-base mb-12 w-full">
                 <li>

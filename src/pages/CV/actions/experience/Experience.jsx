@@ -21,6 +21,7 @@ export const Experience = (props) => {
         ["LabSuit", "2014", "QA", 5, "Internship job"],
     ];
     const [open, setOpen] = useState([false, true, false, true, false, false]);
+    const [rerender, setRerender] = useState();
     // console.log(content);
     return (
         <div className="scrollbar overflow-y-auto h-full">
@@ -38,12 +39,13 @@ export const Experience = (props) => {
                                 className={`h-6 w-6 mt-2 cursor-pointer ${
                                     open[i] ? "" : "-rotate-90"
                                 }`}
-                                onClick={() =>
+                                onClick={() => {
                                     setOpen((prev) => {
                                         let item = !prev[i];
                                         return [...prev, (prev[i] = item)];
-                                    })
-                                }
+                                    });
+                                    setRerender(!rerender);
+                                }}
                             />
                             <img
                                 src={

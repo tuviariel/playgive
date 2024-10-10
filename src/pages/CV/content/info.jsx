@@ -245,7 +245,7 @@ const Info = (props) => {
                 </li>
                 <li>
                     At the moment I'm looking for work from North Israel, through Tel Aviv (Center
-                    district) and Jerusalem area, (I would consider to relocate if nesisery).
+                    district) and Jerusalem area, (I would consider to relocate if necessary).
                 </li>
                 <li>
                     I would prefer a hybrid work culture with open minded to a work life balance.

@@ -11,7 +11,7 @@ const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
     const [content, setContent] = useState("welcome");
     const [skill, setSkill] = useState(0);
-    const tooltips = ["experience", "education", "skills", "information"];
+    const tooltips = ["experience", "education", "skills", "summary"];
 
     useEffect(() => {
         if (skill > 0) {
