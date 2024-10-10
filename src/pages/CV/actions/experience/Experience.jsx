@@ -21,7 +21,7 @@ export const Experience = (props) => {
         ["LabSuit", "2014", "QA", 5, "Internship job"],
     ];
     const [open, setOpen] = useState([false, true, false, true, false, false]);
-    console.log(content);
+    // console.log(content);
     return (
         <div className="scrollbar overflow-y-auto h-full">
             {exp.map((ex, i) => {

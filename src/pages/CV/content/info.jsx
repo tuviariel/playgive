@@ -19,6 +19,7 @@ import Gitlab from "../assets/gitlab.svg";
 import Figma from "../assets/figma.svg";
 import Zeplin from "../assets/zeplin.svg";
 import SQL from "../assets/sql.svg";
+import VSCode from "../assets/vs-code.svg";
 
 const Info = (props) => {
     const { setSkill } = props;
@@ -30,7 +31,7 @@ const Info = (props) => {
                     More Information <span className="text-lg">[Updated at 10/2024]</span>
                 </div>
             </div>
-            <div className="text-xl mb-1 text-cyan-600">A CV Summary:</div>
+            <div className="text-xl mb-1 text-cyan-600">My CV Summary:</div>
             <ul className="list-disc text-base mb-3 w-full">
                 <li>
                     <div>
@@ -155,7 +156,14 @@ const Info = (props) => {
                 <li>
                     <div>
                         Skilled in Software architecture, including OOP, design patterns,
-                        MicroServices and RESTful API.
+                        MicroServices and RESTful API, all happily does through
+                        <span
+                            className="mx-2 inline-flex cursor-pointer hover:underline"
+                            onClick={() => setSkill(1)}>
+                            <img src={VSCode} alt="VSCode" className="h-5 w-4 ml-auto mr-0.5" />
+                            VSCode
+                        </span>
+                        .
                     </div>
                 </li>
                 <li>

@@ -17,8 +17,10 @@ const TabBar = (props) => {
                     return (
                         <div
                             className={`${
-                                content === item ? "bg-[#1e1e1e]" : "bg-[#2d2d2d]"
-                            } min-w-fit w-fit px-2 h-7 mt-auto text-gray-300 flex border border-[#515151] cursor-pointer`}>
+                                content === item
+                                    ? "bg-[#1e1e1e] border-b-0"
+                                    : "bg-[#2d2d2d] cursor-pointer"
+                            } min-w-fit w-fit px-2 h-7 mt-auto text-gray-300 flex border border-[#515151]`}>
                             <img
                                 src={
                                     item === "Leminda.AI"

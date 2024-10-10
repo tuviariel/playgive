@@ -23,15 +23,17 @@ import slack from "../../assets/slack.svg";
 import jira from "../../assets/jira.svg";
 import github from "../../assets/github.svg";
 import gitlab from "../../assets/gitlab.svg";
+import VSCode from "../../assets/vs-code.svg";
 
 export const Skills = (props) => {
     const { setSkill, by } = props;
     const [skills, setSkills] = useState([
+        ["VSCode", 7, VSCode, 1],
         ["React", 6, react, 2],
         ["JavaScript", 7, js, 3],
         ["TypeScript", 3, ts, 4],
         ["HTML(5)", 7, html, 13],
-        ["CSS(3)", 6, css, 14],
+        ["CSS(3)", 7, css, 14],
         ["SCSS", 3, scss, 16],
         ["Tailwindcss", 3, tailwind, 8],
         ["Angular.js", 1, angular, 22],

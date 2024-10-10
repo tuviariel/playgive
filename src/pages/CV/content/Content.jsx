@@ -50,7 +50,7 @@ export const Content = (props) => {
             <div className="flex max-h-[550px]">
                 <div className="scrollbar overflow-y-auto">
                     {content === "welcome" ? (
-                        <Start setActionContent={setActionContent} />
+                        <Start setActionContent={setActionContent} setSkill={setSkill} />
                     ) : content === "Freelance" ? (
                         <Freelance setSkill={setSkill} />
                     ) : content === "Leminda.AI" ? (

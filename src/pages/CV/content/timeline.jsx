@@ -29,7 +29,7 @@ const Timeline = (props) => {
             </div>
             <div className="flex mt-6">
                 <div className="h-8 w-8 relative rounded-full m-2">
-                    {skill > 1 && skill <= 15 && skill !== 9 && (
+                    {skill >= 1 && skill <= 15 && skill !== 9 && (
                         <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
                     )}
                     <img src={Free} alt="Freelance" className="relative h-8 w-8 rounded-full" />
@@ -38,7 +38,7 @@ const Timeline = (props) => {
             </div>
             <div className="flex">
                 <div className="h-8 w-8 relative rounded-full m-2">
-                    {((skill > 1 && skill <= 9 && skill !== 4) ||
+                    {((skill >= 1 && skill <= 9 && skill !== 4) ||
                         skill === 13 ||
                         skill === 14 ||
                         skill === 19) && (
@@ -54,7 +54,7 @@ const Timeline = (props) => {
             </div>
             <div className="flex">
                 <div className="h-8 w-8 relative rounded-full m-2">
-                    {((skill > 1 && skill <= 4) ||
+                    {((skill >= 1 && skill <= 4) ||
                         skill === 16 ||
                         skill === 14 ||
                         skill === 13 ||
@@ -72,7 +72,7 @@ const Timeline = (props) => {
             </div>
             <div className="flex">
                 <div className="h-8 w-8 relative rounded-full m-2">
-                    {((skill > 1 && skill <= 4) ||
+                    {((skill >= 1 && skill <= 4) ||
                         (skill <= 16 && skill >= 11) ||
                         skill === 22 ||
                         skill === 21 ||
@@ -86,7 +86,7 @@ const Timeline = (props) => {
             </div>
             <div className="flex">
                 <div className="h-8 w-8 relative rounded-full m-2">
-                    {((skill > 1 && skill <= 3) ||
+                    {((skill >= 1 && skill <= 3) ||
                         (skill >= 13 && skill <= 15) ||
                         skill === 18 ||
                         skill === 5) && (

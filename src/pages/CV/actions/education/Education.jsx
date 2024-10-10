@@ -15,7 +15,7 @@ export const Education = (props) => {
         ["Moreshet Ya'akov Collage", "2011 - 2014", "BEd", 2],
     ];
     const [open, setOpen] = useState([true, false, false]);
-    console.log(content);
+    // console.log(content);
     return (
         <div className="scrollbar overflow-y-auto h-full">
             {exp.map((ex, i) => {

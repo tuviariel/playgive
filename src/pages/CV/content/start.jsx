@@ -2,25 +2,40 @@ import ExperienceLink from "../assets/experinceLink.svg";
 import EducationLink from "../assets/educationLink.svg";
 import SkillsLink from "../assets/skillsLink.svg";
 import InfoLink from "../assets/infoLink.svg";
+import MyLinks from "./myLinks";
+import VSCode from "../assets/vs-code.svg";
+
 const Start = (props) => {
-    const { setActionContent } = props;
+    const { setActionContent, setSkill } = props;
     return (
         <div className="text-slate-50 ml-12 my-10">
             <div className="text-xl">Welcome to my CV site</div>
             <div className="text-base mb-12 w-full">
                 <div>
-                    For those of you who aren't familiar, this is how the VSCode looks like. VSCode
-                    is the main platform that I create my magic on. I built this site to give people
-                    who are in my field of expertise a worm feeling, just like they are at home.
+                    For those of you who aren't familiar, this is how the
+                    <span
+                        className="mx-2 inline-flex cursor-pointer hover:underline"
+                        onClick={() => setSkill(1)}>
+                        <img src={VSCode} alt="VSCode" className="h-5 w-4 ml-auto mr-0.5" />
+                        VSCode
+                    </span>
+                    looks like. VSCode is the main platform that I create my magic on. I built this
+                    site to give people who are in my field of expertise a worm feeling, just like
+                    they are at home.
+                </div>
+                <div className="text-sm my-3">
+                    [By the way- notice that clicking on the VSCode icon shows in the timeline on
+                    the right side of the screen where I learned and experienced that skill. It will
+                    work with the other skills in this site...]
                 </div>
                 <div>
-                    Of course not all the features work like the real platform (they are irrelevant
-                    for a CV site and would have taken to much of my free time).
+                    Of course not all the features work like the real VSCode (they are irrelevant
+                    for a CV site).
                 </div>
                 <div> Enjoy!</div>
             </div>
 
-            <div className="text-base mt-8 mb-1">Shortcuts</div>
+            <div className="text-base mt-5 mb-1">Shortcuts</div>
             <div className="text-xs">
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
@@ -49,41 +64,7 @@ const Start = (props) => {
             </div>
             <div className="text-base mt-8 mb-1">Links</div>
             <div className="text-xs">
-                <div className="flex">
-                    <a
-                        href="https://www.linkedin.com/in/tuviaariel"
-                        target="_blank"
-                        className="text-[#3094DB] cursor-pointer mr-4">
-                        LinkedIn
-                    </a>
-                    <a href="https://www.linkedin.com/in/tuviaariel" target="_blank">
-                        https://www.linkedin.com/in/tuviaariel
-                    </a>
-                </div>
-                <div className="flex">
-                    <a
-                        href="https://github.com/tuviariel"
-                        target="_blank"
-                        className="text-[#3094DB] cursor-pointer mr-4">
-                        GitHub
-                    </a>
-                    <a href="https://github.com/tuviariel" target="_blank">
-                        https://github.com/tuviariel
-                    </a>
-                </div>
-                <div className="flex">
-                    <a
-                        href="https://drive.google.com/file/d/1FnZzBuBIY7hDpP5wSE_omyU1E9Fx76ZF/view?usp=sharing"
-                        target="_blank"
-                        className="text-[#3094DB] cursor-pointer mr-4">
-                        CV
-                    </a>
-                    <a
-                        href="https://drive.google.com/file/d/1FnZzBuBIY7hDpP5wSE_omyU1E9Fx76ZF/view?usp=sharing"
-                        target="_blank">
-                        https://drive.google.com/file/[my-cv]
-                    </a>
-                </div>
+                <MyLinks />
                 <div className="flex">
                     <a
                         href="mailto:tuviaa109@gmail.com"

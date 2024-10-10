@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Tooltip from "./tooltip";
 import portrait from "./assets/ProfilePicturePhoto.jpg";
-import Files from "./actions/experience";
 import Actions from "./actions";
 import Content from "./content";
 import ContactBar from "./content/contactBar";
+import MyLinks from "./content/myLinks";
+import VSCode from "./assets/vs-code.svg";
 
 const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
@@ -21,12 +22,14 @@ const CV = () => {
     }, [skill]);
     return (
         <>
-            <div className="h-screen bg-[#252526] sm:hidden p-3 text-white">
-                <img src={portrait} alt="my-logo" className="h-14 w-auto rounded-full" />
-
+            <div className="h-screen w-screen bg-[#252526] sm:hidden p-3 text-white">
+                <div className="flex w-full">
+                    <img src={portrait} alt="my-logo" className="h-14 w-auto rounded-full" />
+                    <img src={VSCode} alt="VS Code" className="ml-auto h-14 w-auto" />
+                </div>
                 <div className="text-xl my-3">Welcome!</div>
                 <div className="text-lg mb-2">
-                    I'm Tuvia Ariel and I'm a Full Stack / Front End Web Developer
+                    I'm Tuvia Ariel, a Full Stack / Front End Web Developer
                 </div>
                 <div className="text-base mb-2">
                     It seems you are using a Phone to view my CV site. It is recommended to move to
@@ -34,54 +37,24 @@ const CV = () => {
                     phone on it's side to see if it shows...
                 </div>
                 <div className="text-base mb-2">
-                    Anyway, feel free to contact my in any way you'd like through the fallowing
+                    Anyway, feel free to contact me in any way you'd like through the fallowing
                     links:
                 </div>
                 <div className="ml-auto mb-2">
                     <ContactBar />
                 </div>
-                <div className="">
+                <div className="mb-2">
                     Or to read a bit about my experience through the fallowing links:
                 </div>
-                <>
-                    <div className="flex">
-                        <a
-                            href="https://www.linkedin.com/in/tuviaariel"
-                            target="_blank"
-                            className="text-[#3094DB] cursor-pointer mr-4">
-                            LinkedIn
-                        </a>
-                        <a href="https://www.linkedin.com/in/tuviaariel" target="_blank">
-                            https://www.linkedin.com/in/tuviaariel
-                        </a>
-                    </div>
-                    <div className="flex">
-                        <a
-                            href="https://github.com/tuviariel"
-                            target="_blank"
-                            className="text-[#3094DB] cursor-pointer mr-4">
-                            GitHub
-                        </a>
-                        <a href="https://github.com/tuviariel" target="_blank">
-                            https://github.com/tuviariel
-                        </a>
-                    </div>
-                    <div className="flex">
-                        <a
-                            href="https://drive.google.com/file/d/1FnZzBuBIY7hDpP5wSE_omyU1E9Fx76ZF/view?usp=sharing"
-                            target="_blank"
-                            className="text-[#3094DB] cursor-pointer mr-4">
-                            CV
-                        </a>
-                        <a
-                            href="https://drive.google.com/file/d/1FnZzBuBIY7hDpP5wSE_omyU1E9Fx76ZF/view?usp=sharing"
-                            target="_blank">
-                            https://drive.google.com/file/[my-cv]
-                        </a>
-                    </div>
-                </>
+                <div className="ml-2">
+                    <MyLinks />
+                </div>
+                <div className="my-2">
+                    In the meanwhile, have a great day and good luck with everything!
+                </div>
+                <div className="mb-2 ml-3">Tuvia</div>
             </div>
-            <div className="h-screen overflow-hidden hidden sm:block">
+            <div className="h-screen w-screen overflow-hidden hidden sm:block">
                 <div className="bg-[#3c3c3c] h-[8%] w-full p-3 flex text-gray-300 relative">
                     <img src={portrait} alt="my-logo" className="mr-5 h-full w-auto rounded-full" />
                     <div className="mt-1">Tuvia Ariel</div>
@@ -103,6 +76,7 @@ const CV = () => {
                                 />
                             );
                         })}
+                        <img src={VSCode} alt="VS Code" className="mt-auto mx-auto mb-3 h-8 w-8" />
                     </div>
                     <div className="w-80 bg-[#252526]">
                         <Actions
