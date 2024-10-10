@@ -7,7 +7,7 @@ const Start = (props) => {
     return (
         <div className="text-slate-50 ml-12 my-10">
             <div className="text-xl">Welcome to my CV site</div>
-            <div className="text-base mb-12 w-[600px]">
+            <div className="text-base mb-12 w-full">
                 <div>
                     For those of you who aren't familiar, this is how the VSCode looks like. VSCode
                     is the main platform that I create my magic on. I built this site to give people
