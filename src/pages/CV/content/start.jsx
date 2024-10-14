@@ -3,13 +3,14 @@ import EducationLink from "../assets/educationLink.svg";
 import SkillsLink from "../assets/skillsLink.svg";
 import SummaryLink from "../assets/summaryLink.svg";
 import MyLinks from "./myLinks";
-import VSCode from "../assets/vs-code.svg";
 import Clickable from "./clickable";
+import portrait from "../assets/logoPic2.jpg";
 
 const Start = (props) => {
     const { setActionContent, setSkill, setContent } = props;
     return (
         <>
+            <img src={portrait} alt="my-logo" className="h-14 w-auto rounded-full mb-2" />
             <div className="text-xl">Welcome to my CV site</div>
             <div className="text-base mb-12 w-full">
                 <div>

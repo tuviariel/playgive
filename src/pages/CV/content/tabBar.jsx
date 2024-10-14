@@ -1,5 +1,5 @@
 import ContactBar from "./contactBar";
-import Free from "../assets/ProfilePicturePhoto.jpg";
+import Free from "../assets/logoPic2.jpg";
 import Leminda from "../assets/leminda.svg";
 import Vaivrach from "../assets/vaivrach.jpg";
 import Beezi from "../assets/BeeziB.svg";

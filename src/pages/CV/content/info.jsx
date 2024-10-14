@@ -1,4 +1,4 @@
-import InfoLogo from "../assets/ProfilePicturePhoto.jpg";
+import InfoLogo from "../assets/logoPic2.jpg";
 import Clickable from "./clickable";
 
 const Info = (props) => {

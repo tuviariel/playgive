@@ -1,6 +1,6 @@
 import { useState } from "react";
 import arrow from "../../assets/arrow-down.svg";
-import Free from "../../assets/ProfilePicturePhoto.jpg";
+import Free from "../../assets/logoPic2.jpg";
 import Leminda from "../../assets/leminda.svg";
 import Beezi from "../../assets/BeeziB.svg";
 import Vaivrach from "../../assets/vaivrach.jpg";

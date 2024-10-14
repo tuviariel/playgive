@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Tooltip from "./tooltip";
-import portrait from "./assets/ProfilePicturePhoto.jpg";
+import portrait from "./assets/logoPic2.jpg";
 import Actions from "./actions";
 import Content from "./content";
 import ContactBar from "./content/contactBar";
