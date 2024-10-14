@@ -48,7 +48,7 @@ const TabBar = (props) => {
                             <div className="my-auto" onClick={() => setContent(item)}>
                                 {item}
                             </div>
-                            {item !== "welcome" && (
+                            {item !== "Welcome" && (
                                 <div
                                     className="ml-2 mb-auto text-sm hover:bg-slate-600 rounded-md p-0.5 cursor-pointer"
                                     onClick={() => closeTag(item)}>

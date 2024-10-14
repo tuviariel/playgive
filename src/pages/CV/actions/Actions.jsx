@@ -9,7 +9,7 @@ export const Actions = (props) => {
     return (
         <>
             <Title name={action} setBy={setBy} by={by} />
-            <div className="overflow-y-auto h-full">
+            <div className="overflow-y-auto scrollbar h-full pb-24">
                 {action === "experience" ? (
                     <Experience content={content} setContent={setContent} />
                 ) : action === "education" ? (

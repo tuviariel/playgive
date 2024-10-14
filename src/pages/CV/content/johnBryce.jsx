@@ -10,7 +10,7 @@ import github from "../assets/github.svg";
 const JB = (props) => {
     const { setSkill } = props;
     return (
-        <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
+        <>
             <div className="flex">
                 <img src={JBLogo} alt="John Bryce" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">John Bryce (Tel-Aviv)</div>
@@ -100,7 +100,7 @@ const JB = (props) => {
                     <div>Protocols: http, https, xml, json.</div>
                 </li>
             </ul>
-        </div>
+        </>
     );
 };
 export default JB;

@@ -18,7 +18,7 @@ export const Education = (props) => {
     const [rerender, setRerender] = useState();
     // console.log(content);
     return (
-        <div className="scrollbar overflow-y-auto h-full">
+        <>
             {exp.map((ex, i) => {
                 return (
                     <div
@@ -83,6 +83,6 @@ export const Education = (props) => {
                     </div>
                 );
             })}
-        </div>
+        </>
     );
 };

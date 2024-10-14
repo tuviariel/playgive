@@ -11,7 +11,7 @@ const Timeline = (props) => {
     const { skill } = props;
     return (
         <div
-            className={`relative min-w-36 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] ${
+            className={`relative min-w-36 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] max-h-full scrollbar overflow-auto ${
                 // skill !== 0 ? "border-yellow-500" : ""
                 ""
             }`}>
@@ -22,7 +22,7 @@ const Timeline = (props) => {
                     ""
                 }`}></div>
             <div
-                className={`mt-8 mb-2 ml-2 underline text-xs ${
+                className={`mt-3 mb-2 ml-2 underline text-xs ${
                     skill !== 0 ? "text-yellow-500" : "text-fuchsia-200"
                 }`}>
                 Professional timeline:
@@ -137,7 +137,7 @@ const Timeline = (props) => {
                     <img src={Teco} alt="Teco-1" className="relative h-8 w-8 rounded-full" />
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex pb-16 lg:pb-0">
                 <div className="my-auto ml-auto">2011-2014</div>
                 <img src={Moreshet} alt="MoreshetYaakov" className="h-8 w-8 rounded-full m-2" />
             </div>

@@ -4,37 +4,27 @@ import SkillsLink from "../assets/skillsLink.svg";
 import SummaryLink from "../assets/summaryLink.svg";
 import MyLinks from "./myLinks";
 import VSCode from "../assets/vs-code.svg";
+import Clickable from "./clickable";
 
 const Start = (props) => {
     const { setActionContent, setSkill, setContent } = props;
     return (
-        <div className="text-slate-50 ml-12 my-10">
+        <>
             <div className="text-xl">Welcome to my CV site</div>
             <div className="text-base mb-12 w-full">
                 <div>
-                    For those of you who aren't familiar, this is how the
-                    <span
-                        className="mx-2 inline-flex cursor-pointer hover:underline"
-                        onClick={() => setSkill(1)}>
-                        <img src={VSCode} alt="VSCode" className="h-5 w-4 ml-auto mr-0.5" />
-                        VSCode
-                    </span>
-                    looks like. VSCode is the main platform that I create my magic on. I built this
-                    site to give people who are in my field of expertise a worm feeling, just like
-                    they are at home.
+                    <Clickable code={1} setSkill={setSkill} />
+                    is the main platform that I use to do my magic. I designed this site to create a
+                    worm comfy feeling - like being at home, for VSCode users.
                 </div>
                 <div className="text-sm my-3">
                     [By the way- notice that clicking on the VSCode icon shows in the timeline on
                     the right side of the screen where I learned and experienced that skill. It will
                     work with the other skills in this site...]
                 </div>
-                <div>
-                    Of course not all the features work like the real VSCode (they are irrelevant
-                    for a CV site).
-                </div>
+                <div>*Not all the features of VSCode are activated on the web site.</div>
                 <div> Enjoy!</div>
             </div>
-
             <div className="text-base mt-5 mb-1">Shortcuts</div>
             <div className="text-xs">
                 <div
@@ -57,7 +47,7 @@ const Start = (props) => {
                 </div>
                 <div
                     className="text-[#3094DB] cursor-pointer flex"
-                    onClick={() => setContent("summary")}>
+                    onClick={() => setContent("Summary")}>
                     <img src={SummaryLink} alt="Summary" className="h-5 w-5 mr-4" />
                     Summary...
                 </div>
@@ -101,7 +91,7 @@ const Start = (props) => {
                     </a>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 export default Start;

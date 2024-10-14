@@ -9,9 +9,9 @@ import VSCode from "./assets/vs-code.svg";
 
 const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
-    const [content, setContent] = useState("welcome");
+    const [content, setContent] = useState("Welcome");
     const [skill, setSkill] = useState(0);
-    const tooltips = ["experience", "education", "skills", "summary"];
+    const tooltips = ["experience", "education", "skills", "Summary"];
 
     useEffect(() => {
         if (skill > 0) {
@@ -55,15 +55,15 @@ const CV = () => {
                 <div className="mb-2 ml-3">Tuvia</div>
             </div>
             <div className="h-screen w-screen overflow-hidden hidden sm:block">
-                <div className="bg-[#3c3c3c] h-[8%] w-full p-3 flex text-gray-300 relative">
-                    <img src={portrait} alt="my-logo" className="mr-5 h-full w-auto rounded-full" />
+                <div className="bg-[#3c3c3c] h-10 md:h-14 w-full p-1 md:p-3 flex text-gray-300 relative">
+                    <img src={portrait} alt="my-logo" className="mr-5 h-8  w-auto rounded-full" />
                     <div className="mt-1">Tuvia Ariel</div>
                     <div className="mt-1 ml-auto">Full Stack / Front End Web Developer</div>
-                    <div className="absolute translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2 bg-[#464646] border border-[#505050] rounded-md py-auto px-24 flex ">
+                    <div className="absolute translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2 bg-[#464646] border border-[#505050] rounded-md py-auto px-3 md:px-16 flex ">
                         CV review
                     </div>
                 </div>
-                <div className="flex flex-row h-[92%]">
+                <div className="flex flex-row h-full">
                     <div className="bg-[#333333] w-16 flex flex-col gap-4 content-start">
                         {tooltips.map((tooltip, i) => {
                             return (
@@ -76,7 +76,7 @@ const CV = () => {
                                 />
                             );
                         })}
-                        <img src={VSCode} alt="VS Code" className="mt-auto mx-auto mb-3 h-8 w-8" />
+                        <img src={VSCode} alt="VSCode" className="mt-auto mb-16 mx-auto h-8 w-8" />
                     </div>
                     <div className="w-80 bg-[#252526]">
                         <Actions

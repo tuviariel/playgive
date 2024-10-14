@@ -13,14 +13,16 @@ export const Tooltip = (props) => {
     const [hover, setHover] = useState(false);
     return (
         <div
-            className={`relative px-3 cursor-pointer ${
-                current === actionContent ? "border-l-2 border-white pl-2.5" : ""
+            className={`relative px-1 lg:px-3 cursor-pointer ${
+                current === actionContent
+                    ? "border-l-2 border-white lg:pl-2.5 sm:pr-0.5 sm:pl-1"
+                    : ""
             } ${actionContent === "experience" ? "mt-3" : ""}`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={() =>
-                actionContent === "summary"
-                    ? setContent("summary")
+                actionContent === "Summary"
+                    ? setContent("Summary")
                     : setActionContent(actionContent)
             }>
             <img
@@ -37,8 +39,8 @@ export const Tooltip = (props) => {
                         ? hover || current === "skills"
                             ? skillsHover
                             : skillsIcon
-                        : actionContent === "summary"
-                        ? hover || current === "summary"
+                        : actionContent === "Summary"
+                        ? hover || current === "Summary"
                             ? summaryHover
                             : summaryIcon
                         : ""

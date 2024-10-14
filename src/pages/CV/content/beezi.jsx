@@ -10,7 +10,7 @@ import Html from "../assets/html-5.svg";
 const Beezi = (props) => {
     const { setSkill } = props;
     return (
-        <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
+        <>
             <div className="flex">
                 <img src={BeeziLogo} alt="Beezi" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Beezi</div>
@@ -91,7 +91,7 @@ const Beezi = (props) => {
                     </div>
                 </li>
             </ul>
-        </div>
+        </>
     );
 };
 export default Beezi;

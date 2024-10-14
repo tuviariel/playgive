@@ -7,7 +7,7 @@ import TecoLogo from "../assets/teco.png";
 const Teco = (props) => {
     const { setSkill } = props;
     return (
-        <div className="text-slate-50 ml-12 my-10 pr-12 mb-4">
+        <>
             <div className="flex">
                 <img src={TecoLogo} alt="Teco-1" className="h-10 w-10 mr-2" />
 
@@ -68,7 +68,7 @@ const Teco = (props) => {
                     </div>
                 </li>
             </ul>
-        </div>
+        </>
     );
 };
 export default Teco;

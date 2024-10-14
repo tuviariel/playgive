@@ -24,7 +24,7 @@ export const Experience = (props) => {
     const [rerender, setRerender] = useState();
     // console.log(content);
     return (
-        <div className="scrollbar overflow-y-auto h-full">
+        <>
             {exp.map((ex, i) => {
                 return (
                     <div
@@ -100,6 +100,6 @@ export const Experience = (props) => {
                     </div>
                 );
             })}
-        </div>
+        </>
     );
 };
