@@ -1,7 +1,4 @@
-import Jira from "../assets/jira.svg";
-import SQL from "../assets/sql.svg";
-import python from "../assets/python.svg";
-import Trello from "../assets/trello.svg";
+import Clickable from "./clickable";
 import TecoLogo from "../assets/teco.png";
 
 const Teco = (props) => {
@@ -21,49 +18,26 @@ const Teco = (props) => {
             </div>
             <ul className="list-disc text-base mb-12 w-full">
                 <li>
-                    <div>Analyzing product definitions and writing test forms (STD).</div>
+                    <div>Analyzing product definitions and writing test forms (STD)</div>
                 </li>
                 <li>
                     <div>
                         Testing live products in various methods: Progression, Regression, Sanity,
-                        Unit, Functional and End to End.
+                        Unit, Functional and End to End
                     </div>
                 </li>
                 <li>
                     <div>
                         Reporting and managing Bugs until solution with
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(21)}>
-                            <img src={Jira} alt="Jira" className="h-5 w-4 ml-auto mr-0.5" />
-                            JIRA
-                        </span>
-                        and
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(7)}>
-                            <img src={Trello} alt="Trello" className="h-5 w-4 ml-auto mr-0.5" />
-                            Trello
-                        </span>
-                        .
+                        <Clickable code={21} setSkill={setSkill} /> and
+                        <Clickable code={7} setSkill={setSkill} />
                     </div>
                 </li>
                 <li>
                     <div>
                         Introduction to
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(17)}>
-                            <img src={SQL} alt="SQL" className="h-5 w-4 ml-auto mr-0.5" />
-                            SQL
-                        </span>
-                        ,
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(24)}>
-                            <img src={python} alt="Python" className="h-5 w-4 ml-auto mr-0.5" />
-                            Python
-                        </span>
+                        <Clickable code={17} setSkill={setSkill} />,
+                        <Clickable code={24} setSkill={setSkill} />
                         and Linux.
                     </div>
                 </li>

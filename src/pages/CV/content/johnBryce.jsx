@@ -1,11 +1,5 @@
 import JBLogo from "../assets/JohnBryce.jpg";
-import SQL from "../assets/sql.svg";
-import Html from "../assets/html-5.svg";
-import Css from "../assets/css-3.svg";
-import Angular from "../assets/angular.svg";
-import JS from "../assets/js.svg";
-import Java from "../assets/java.svg";
-import github from "../assets/github.svg";
+import Clickable from "./clickable";
 
 const JB = (props) => {
     const { setSkill } = props;
@@ -26,78 +20,29 @@ const JB = (props) => {
             <ul className="list-disc text-base mb-12 w-full">
                 <li>
                     <div>
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(23)}>
-                            <img
-                                src={Java}
-                                alt="Java"
-                                className="h-5 w-4 ml-auto mr-0.5 bg-white"
-                            />
-                            Java
-                        </span>
+                        <Clickable code={23} setSkill={setSkill} />
                         & J2EE development (Web Servlets, REST Web services) and DataBase
-                        implementing with
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(17)}>
-                            <img src={SQL} alt="SQL" className="h-5 w-4 ml-auto mr-0.5" />
-                            MySQL
-                        </span>
-                        .
+                        implementing with MySQL (
+                        <Clickable code={17} setSkill={setSkill} />)
                     </div>
                 </li>
                 <li>
                     <div>
                         Client-side techs:
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(13)}>
-                            <img src={Html} alt="HTML" className="h-5 w-4 ml-auto mr-0.5" />
-                            HTML
-                        </span>
-                        ,
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(3)}>
-                            <img src={JS} alt="JavaScript" className="h-5 w-4 ml-auto mr-0.5" />
-                            JavaScript
-                        </span>
-                        ,
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(14)}>
-                            <img src={Css} alt="CSS" className="h-5 w-4 ml-auto mr-0.5" />
-                            CSS
-                        </span>
-                        , and how they merge in
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(22)}>
-                            <img src={Angular} alt="AngularJS" className="h-5 w-4 ml-auto mr-0.5" />
-                            AngularJS
-                        </span>
-                        .
+                        <Clickable code={13} setSkill={setSkill} />, ,
+                        <Clickable code={3} setSkill={setSkill} />,
+                        <Clickable code={14} setSkill={setSkill} />, and how they merge in
+                        <Clickable code={22} setSkill={setSkill} />
                     </div>
                 </li>
                 <li>
                     <div>
                         Managing source control with
-                        <span
-                            className="mx-2 inline-flex cursor-pointer hover:underline"
-                            onClick={() => setSkill(5)}>
-                            <img
-                                src={github}
-                                alt="github"
-                                className="h-5 w-4 ml-auto mr-0.5 bg-white rounded-full"
-                            />
-                            GitHub
-                        </span>
-                        .
+                        <Clickable code={5} setSkill={setSkill} />
                     </div>
                 </li>
                 <li>
-                    <div>Protocols: http, https, xml, json.</div>
+                    <div>Protocols: http, https, xml, json</div>
                 </li>
             </ul>
         </>

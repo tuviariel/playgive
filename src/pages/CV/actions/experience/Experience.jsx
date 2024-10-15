@@ -82,11 +82,7 @@ export const Experience = (props) => {
                                 <div className="flex">
                                     <img src={Years} alt="Year(s)" className="h-6 w-6" />
                                     <div className="ml-0.5">
-                                        {"Year" +
-                                            (ex[1].length > 4 ? "s" : "") +
-                                            ": " +
-                                            ex[1] +
-                                            "."}
+                                        {"Year" + (ex[1].length > 4 ? "s" : "") + ": " + ex[1]}
                                     </div>
                                 </div>
                                 <div className="flex">

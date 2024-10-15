@@ -46,7 +46,7 @@ const Impact = (props) => {
                         <Clickable code={18} setSkill={setSkill} />
                         using their
                         <Clickable code={15} setSkill={setSkill} />
-                        Data Base.
+                        Data Base
                     </div>
                 </li>
                 <li>

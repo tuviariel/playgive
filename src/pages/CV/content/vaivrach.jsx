@@ -37,7 +37,7 @@ const Vaivrach = (props) => {
                         <Clickable code={11} setSkill={setSkill} />
                         using
                         <Clickable code={12} setSkill={setSkill} />
-                        on the Back End (~%20) to create several digital escape rooms.
+                        on the Back End (~%20) to create several digital escape rooms
                     </div>
                 </li>
                 <li>

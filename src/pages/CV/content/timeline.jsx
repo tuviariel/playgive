@@ -8,7 +8,7 @@ import JohnBryce from "../assets/JohnBryce.jpg";
 import Moreshet from "../assets/מורשת יעקב.jpeg";
 import Teco from "../assets/teco.png";
 const Timeline = (props) => {
-    const { skill } = props;
+    const { skill, setContent, content } = props;
     return (
         <div
             className={`relative min-w-36 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] max-h-full scrollbar overflow-auto ${
@@ -27,7 +27,11 @@ const Timeline = (props) => {
                 }`}>
                 Professional timeline:
             </div>
-            <div className="flex mt-6">
+            <div
+                className={`flex mt-6 cursor-pointer ${
+                    content === "Freelance" ? "bg-[#303030]" : ""
+                }`}
+                onClick={() => setContent("Freelance")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {skill >= 1 && skill <= 15 && skill !== 9 && (
                         <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
@@ -36,7 +40,9 @@ const Timeline = (props) => {
                 </div>
                 <div className="my-auto">2024-today</div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${content === "Leminda.AI" ? "bg-[#303030]" : ""}`}
+                onClick={() => setContent("Leminda.AI")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 9 && skill !== 4) ||
                         skill === 13 ||
@@ -52,7 +58,9 @@ const Timeline = (props) => {
                 </div>
                 <div className="my-auto">2022-2023</div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${content === "Beezi" ? "bg-[#303030]" : ""}`}
+                onClick={() => setContent("Beezi")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 4) ||
                         skill === 16 ||
@@ -70,7 +78,9 @@ const Timeline = (props) => {
                 </div>
                 <div className="my-auto">2020</div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${content === "Va'ivrach" ? "bg-[#303030]" : ""}`}
+                onClick={() => setContent("Va'ivrach")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 4) ||
                         (skill <= 16 && skill >= 11) ||
@@ -84,7 +94,11 @@ const Timeline = (props) => {
                 </div>
                 <div className="my-auto">2017-2021</div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${
+                    content === "Impact by Mati" ? "bg-[#303030]" : ""
+                }`}
+                onClick={() => setContent("Impact by Mati")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 3) ||
                         (skill >= 13 && skill <= 15) ||
@@ -100,7 +114,9 @@ const Timeline = (props) => {
                 </div>
                 <div className="my-auto">2016</div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${content === "John Bryce" ? "bg-[#303030]" : ""}`}
+                onClick={() => setContent("John Bryce")}>
                 <div className="my-auto ml-auto">2015</div>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill > 1 && skill <= 3) ||
@@ -119,7 +135,9 @@ const Timeline = (props) => {
                     />
                 </div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${content === "LabSuit" ? "bg-[#303030]" : ""}`}
+                onClick={() => setContent("LabSuit")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {skill === 7 && (
                         <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
@@ -128,7 +146,9 @@ const Timeline = (props) => {
                 </div>
                 <div className="my-auto">2015</div>
             </div>
-            <div className="flex">
+            <div
+                className={`flex cursor-pointer ${content === "Teco1" ? "bg-[#303030]" : ""}`}
+                onClick={() => setContent("Teco1")}>
                 <div className="ml-auto my-auto">2014</div>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {(skill === 7 || skill === 21 || skill === 17 || skill === 24) && (
@@ -137,7 +157,11 @@ const Timeline = (props) => {
                     <img src={Teco} alt="Teco-1" className="relative h-8 w-8 rounded-full" />
                 </div>
             </div>
-            <div className="flex pb-16 lg:pb-0">
+            <div
+                className={`flex pb-16 lg:pb-0 cursor-pointer ${
+                    content === "Moreshet Ya'akov Collage" ? "bg-[#303030]" : ""
+                }`}
+                onClick={() => setContent("Moreshet Ya'akov Collage")}>
                 <div className="my-auto ml-auto">2011-2014</div>
                 <img src={Moreshet} alt="MoreshetYaakov" className="h-8 w-8 rounded-full m-2" />
             </div>

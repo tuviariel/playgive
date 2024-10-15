@@ -13,7 +13,8 @@ const Moreshet = (props) => {
                 <span className="text-yellow-500 mr-2">Moreshet Ya'akov College,</span> graduated a
                 B.Ed degree (3 years). Participated in the Ministry of education honors program. I
                 know the degree doesn't represent any of my technical skills or experience but I'm
-                mentioning it here because I believe the degree does show my persistance and..
+                mentioning it here because I believe the degree does show my persistance and
+                responsibility.
             </div>
         </>
     );

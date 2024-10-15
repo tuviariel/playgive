@@ -6,6 +6,7 @@ import Content from "./content";
 import ContactBar from "./content/contactBar";
 import MyLinks from "./content/myLinks";
 import VSCode from "./assets/vs-code.svg";
+import click from "./assets/click.gif";
 
 const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
@@ -76,6 +77,7 @@ const CV = () => {
                                 />
                             );
                         })}
+                        <img src={click} alt="click" className="h-8 w-8 mx-auto" />
                         <img src={VSCode} alt="VSCode" className="mt-auto mb-16 mx-auto h-8 w-8" />
                     </div>
                     <div className="w-80 bg-[#252526]">

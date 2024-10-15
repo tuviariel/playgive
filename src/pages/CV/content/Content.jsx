@@ -81,7 +81,7 @@ export const Content = (props) => {
                         )}
                     </div>
                 </div>
-                <Timeline skill={skill} />
+                <Timeline skill={skill} content={content} setContent={setContent} />
             </div>
             <Terminal />
         </div>

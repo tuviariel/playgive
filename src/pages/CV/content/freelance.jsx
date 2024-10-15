@@ -22,7 +22,7 @@ const Freelance = (props) => {
                         <Clickable code={2} setSkill={setSkill} />,
                         <Clickable code={8} setSkill={setSkill} />, and
                         <Clickable code={4} setSkill={setSkill} />
-                        from scratch.
+                        from scratch
                     </div>
                 </li>
                 <li>
@@ -42,11 +42,11 @@ const Freelance = (props) => {
                 <li>
                     <div>
                         Planned architecture to withstand high performance and stability as
-                        MicroServices.
+                        MicroServices
                     </div>
                 </li>
                 <li>
-                    <div>Modifying and adding features in the component layout.</div>
+                    <div>Modifying and adding features in the component layout</div>
                 </li>
                 <li>
                     <div>

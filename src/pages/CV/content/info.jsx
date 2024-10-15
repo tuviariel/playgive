@@ -15,90 +15,80 @@ const Info = (props) => {
             <ul className="list-disc text-base mb-3 w-full">
                 <li>
                     <div>
-                        I have 6 years of experience as a Full Stack / Front End in global High-Tech
-                        SaaS, AI and EdTech companies.
+                        Six years of experience as a Full Stack / Front End developer in global
+                        High-Tech SaaS, AI and EdTech companies.
                     </div>
                 </li>
                 <li>
                     <div>
-                        Proficient with
+                        Front end proficiencies:
                         <Clickable code={2} setSkill={setSkill} />
-                        (JSX / TSX) and Vanilla, while using
+                        , Vanilla,
                         <Clickable code={3} setSkill={setSkill} />,
                         <Clickable code={4} setSkill={setSkill} />,
                         <Clickable code={14} setSkill={setSkill} />,
                         <Clickable code={16} setSkill={setSkill} />,
-                        <Clickable code={8} setSkill={setSkill} />, and
-                        <Clickable code={13} setSkill={setSkill} />
-                        on the Front End, completing apps from scratch to production.
+                        <Clickable code={8} setSkill={setSkill} />,
+                        <Clickable code={13} setSkill={setSkill} />, apps from scratch to production
                     </div>
                 </li>
                 <li>
                     <div>
-                        2 years of experience in the Back End using
+                        Back end Experience (2 years):
                         <Clickable code={11} setSkill={setSkill} />
-                        (with
+                        (w/
                         <Clickable code={12} setSkill={setSkill} />)
                     </div>
                 </li>
                 <li>
                     <div>
-                        Storing data in both
+                        Storing data:
                         <Clickable code={17} setSkill={setSkill} />
-                        (MySQL) and
+                        (MySQL),
                         <Clickable code={15} setSkill={setSkill} />(
                         <Clickable code={10} setSkill={setSkill} />,
-                        <Clickable code={18} setSkill={setSkill} />) databases.
+                        <Clickable code={18} setSkill={setSkill} />)
                     </div>
                 </li>
                 <li>
                     <div>
-                        Skilled in Software architecture, including OOP, design patterns,
-                        MicroServices and RESTful API, all happily does through
+                        Software architecture: OOP, design patterns, MicroServices, RESTful API, all
+                        with
                         <Clickable code={1} setSkill={setSkill} />
                     </div>
                 </li>
                 <li>
                     <div>
-                        Extensive experience in Agile methodology, Utilized tools like
+                        Team work in Agile, Tools including
                         <Clickable code={7} setSkill={setSkill} />,
-                        <Clickable code={19} setSkill={setSkill} />, and
+                        <Clickable code={19} setSkill={setSkill} />,
                         <Clickable code={21} setSkill={setSkill} />
-                        for effective task management. A team player and an independent worker.
-                        Managing source control with
+                        . Managing source control:
                         <Clickable code={5} setSkill={setSkill} /> /
-                        <Clickable code={20} setSkill={setSkill} />
+                        <Clickable code={20} setSkill={setSkill} />. Also an independent worker.
                     </div>
                 </li>
                 <li>
                     <div>
-                        Testing Unit and E2E Testing with Jest.js and Cypress.js. Conducted code
-                        reviews and bug fixing.
+                        Testing: Unit, E2E, using Jest.js and Cypress.js. Including code reviews and
+                        bug fixing.
                     </div>
                 </li>
                 <li>
                     <div>
-                        Designed based on
-                        <Clickable code={9} setSkill={setSkill} />
-                        or
-                        <Clickable code={25} setSkill={setSkill} />
-                        for creating a UI with a keen eye for pixel perfection.
+                        Design:
+                        <Clickable code={9} setSkill={setSkill} />,
+                        <Clickable code={25} setSkill={setSkill} />. creates a UI with pixel
+                        perfection.
                     </div>
                 </li>
             </ul>
-            <div className="text-xl mb-1 text-cyan-600">More general information:</div>
+            <div className="text-xl mb-1 text-cyan-600">General information:</div>
             <ul className="list-disc text-base mb-3 w-full">
-                <li>
-                    I have both a U.S. and IL Citizenship, and fluent communicating in both English
-                    and Hebrew.
-                </li>
-                <li>
-                    At the moment I'm looking for work from North Israel, through Tel Aviv (Center
-                    district) and Jerusalem area, (I would consider to relocate if necessary).
-                </li>
-                <li>
-                    I would prefer a hybrid work culture with open minded to a work life balance.
-                </li>
+                <li>Dualcitizen: U.S., IL</li>
+                <li>Languages: fluent English and Hebrew</li>
+                <li>Seeking employment: center to north Israel.</li>
+                <li>Would prefer a hybrid work culture with open minded to a work life balance.</li>
             </ul>
             <div className="mb-6 text-xl ml-12 block">
                 <div className="text-cyan-600">I'm looking forward to hearing from you!</div>

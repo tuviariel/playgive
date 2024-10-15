@@ -11,19 +11,20 @@ const Start = (props) => {
     return (
         <>
             <img src={portrait} alt="my-logo" className="h-14 w-auto rounded-full mb-2" />
-            <div className="text-xl">Welcome to my CV site</div>
+            <div className="text-xl mb-2">Welcome to my CV site</div>
             <div className="text-base mb-12 w-full">
+                <div className="mb-2">Everything is clickable!</div>
                 <div>
                     <Clickable code={1} setSkill={setSkill} />
                     is the main platform that I use to do my magic. I designed this site to create a
-                    worm comfy feeling - like being at home, for VSCode users.
+                    warm comfy feeling - like being at home, for VSCode users.
                 </div>
                 <div className="text-sm my-3">
-                    [By the way- notice that clicking on the VSCode icon shows in the timeline on
-                    the right side of the screen where I learned and experienced that skill. It will
-                    work with the other skills in this site...]
+                    [By the way- notice that clicking on the VSCode icon above, displays in the
+                    timeline on the right side of the screen where I learned and experienced that
+                    skill. It will work with all the other skills in this site.]
                 </div>
-                <div>*Not all the features of VSCode are activated on the web site.</div>
+                <div>* Not all the features of VSCode are activated on the web site.</div>
                 <div> Enjoy!</div>
             </div>
             <div className="text-base mt-5 mb-1">Shortcuts</div>

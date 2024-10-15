@@ -11,8 +11,8 @@ import Teco from "../assets/teco.png";
 const TabBar = (props) => {
     const { openNav, closeTag, content, setContent } = props;
     return (
-        <div className="flex h-9 w-auto">
-            <div className="scrollbar overflow-x-auto w-full bg-[#333333] flex">
+        <div className="flex h-9 max-w-[1000px]">
+            <div className="scrollbar overflow-x-auto bg-[#333333] flex">
                 {openNav.map((item) => {
                     return (
                         <div
@@ -37,12 +37,12 @@ const TabBar = (props) => {
                                         ? Teco
                                         : item === "John Bryce"
                                         ? JohnBryce
-                                        : item === "Moreshet"
+                                        : item === "Moreshet Ya'akov Collage"
                                         ? Moreshet
                                         : Free
                                 }
                                 alt={item}
-                                className="mr-2 h-4 w-4 my-auto bg-slate-100 rounded-md"
+                                className="mr-2 h-4 w-4 my-auto bg-slate-100 rounded-md border border-white"
                                 onClick={() => setContent(item)}
                             />
                             <div className="my-auto" onClick={() => setContent(item)}>

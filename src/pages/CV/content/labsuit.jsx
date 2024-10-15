@@ -17,10 +17,10 @@ const Labsuit = (props) => {
             </div>
             <ul className="list-disc text-base mb-12 w-full">
                 <li>
-                    <div>Understanding expected workflow, planning and writing STD's.</div>
+                    <div>Understanding expected workflow, planning and writing STD's</div>
                 </li>
                 <li>
-                    <div>Testing websites manually from client-side.</div>
+                    <div>Testing websites manually from client-side</div>
                 </li>
                 <li>
                     <div>
