@@ -11,8 +11,8 @@ import Teco from "../assets/teco.png";
 const TabBar = (props) => {
     const { openNav, closeTag, content, setContent } = props;
     return (
-        <div className="flex h-9 max-w-[1000px]">
-            <div className="scrollbar overflow-x-auto bg-[#333333] flex">
+        <div className="flex h-9 w-full">
+            <div className="scrollbar overflow-x-auto max-w-full bg-[#333333] flex">
                 {openNav.map((item) => {
                     return (
                         <div
