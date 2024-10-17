@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Tooltip from "./tooltip";
-import portrait from "./assets/logoPic2.jpg";
+import portrait from "./assets/logoPic2.png";
 import Actions from "./actions";
 import Content from "./content";
 import ContactBar from "./content/contactBar";
@@ -64,8 +64,8 @@ const CV = () => {
                         CV review
                     </div>
                 </div>
-                <div className="flex flex-row h-full">
-                    <div className="bg-[#333333] w-16 flex flex-col gap-4 content-start">
+                <div className="flex flex-row h-full w-full">
+                    <div className="bg-[#333333] w-14 min-w-14 flex flex-col gap-4 content-start">
                         {tooltips.map((tooltip, i) => {
                             return (
                                 <Tooltip
@@ -80,7 +80,7 @@ const CV = () => {
                         <img src={click} alt="click" className="h-8 w-8 mx-auto" />
                         <img src={VSCode} alt="VSCode" className="mt-auto mb-16 mx-auto h-8 w-8" />
                     </div>
-                    <div className="w-80 bg-[#252526]">
+                    <div className="sm:w-44 sm:min-w-44 lg:w-80 lg:min-w-80 bg-[#252526]">
                         <Actions
                             action={actionContent}
                             content={content}
@@ -88,7 +88,7 @@ const CV = () => {
                             setSkill={setSkill}
                         />
                     </div>
-                    <div className="w-full bg-[#1e1e1e]">
+                    <div className="bg-[#1e1e1e] w-full max-w-full">
                         <Content
                             content={content}
                             setContent={setContent}

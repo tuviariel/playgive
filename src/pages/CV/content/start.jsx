@@ -4,7 +4,7 @@ import SkillsLink from "../assets/skillsLink.svg";
 import SummaryLink from "../assets/summaryLink.svg";
 import MyLinks from "./myLinks";
 import Clickable from "./clickable";
-import portrait from "../assets/logoPic2.jpg";
+import portrait from "../assets/logoPic2.png";
 
 const Start = (props) => {
     const { setActionContent, setSkill, setContent } = props;
@@ -61,10 +61,11 @@ const Start = (props) => {
                     <a
                         href="mailto:tuviaa109@gmail.com"
                         target="_blank"
+                        rel="noreferrer"
                         className="text-[#3094DB] cursor-pointer mr-4">
                         E-mail
                     </a>
-                    <a href="mailto:tuviaa109@gmail.com" target="_blank">
+                    <a href="mailto:tuviaa109@gmail.com" target="_blank" rel="noreferrer">
                         tuviaa109@gmail.com
                     </a>
                 </div>
@@ -72,12 +73,14 @@ const Start = (props) => {
                     <a
                         href="https://wa.me/972509315511?text=Hey%20Tuvia%2C%20I%27d%20like%20to%20interest%20you%20in%20a%20job%20at..."
                         target="_blank"
+                        rel="noreferrer"
                         className="text-[#3094DB] cursor-pointer mr-4">
                         WhatsApp
                     </a>
                     <a
                         href="https://wa.me/972509315511?text=Hey%20Tuvia%2C%20I%27d%20like%20to%20interest%20you%20in%20a%20job%20at..."
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         https://wa.me/972509315511
                     </a>
                 </div>
@@ -85,10 +88,11 @@ const Start = (props) => {
                     <a
                         href="tel:+972-50-931-5511"
                         target="_blank"
+                        rel="noreferrer"
                         className="text-[#3094DB] cursor-pointer mr-4">
                         Phone Call
                     </a>
-                    <a href="tel:+972-50-931-5511" target="_blank">
+                    <a href="tel:+972-50-931-5511" target="_blank" rel="noreferrer">
                         tel:+972-50-931-5511
                     </a>
                 </div>

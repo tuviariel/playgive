@@ -1,4 +1,4 @@
-import InfoLogo from "../assets/logoPic2.jpg";
+import InfoLogo from "../assets/logoPic2.png";
 import Clickable from "./clickable";
 
 const Info = (props) => {
@@ -8,7 +8,7 @@ const Info = (props) => {
             <div className="flex mb-3">
                 <img src={InfoLogo} alt="Info" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">
-                    More Information <span className="text-lg">[Updated at 10/2024]</span>
+                    Summary <span className="text-base">[Update: 10/2024]</span>
                 </div>
             </div>
             <div className="text-xl mb-1 text-cyan-600">My CV Summary:</div>

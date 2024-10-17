@@ -1,5 +1,5 @@
 import ContactBar from "./contactBar";
-import Free from "../assets/logoPic2.jpg";
+import Free from "../assets/logoPic2.png";
 import Leminda from "../assets/leminda.svg";
 import Vaivrach from "../assets/vaivrach.jpg";
 import Beezi from "../assets/BeeziB.svg";
@@ -10,12 +10,20 @@ import Moreshet from "../assets/מורשת יעקב.jpeg";
 import Teco from "../assets/teco.png";
 const TabBar = (props) => {
     const { openNav, closeTag, content, setContent } = props;
+    const barWidth =
+        window.screen.width > 1024
+            ? window.screen.width - 160 - 56 - 320 //for lg: screen - 160 - 56 - 320 = ~1000~px;
+            : window.screen.width - 160 - 56 - 176; //for lg: screen - 160 - 56 - 176 = ~348px;
+    // console.log(barWidth);
     return (
-        <div className="flex h-9 w-full">
-            <div className="scrollbar overflow-x-auto max-w-full bg-[#333333] flex">
-                {openNav.map((item) => {
+        <div className="flex h-8 w-full">
+            <div
+                className={` flex scrollbar overflow-x-auto bg-[#333333]`}
+                style={{ width: barWidth }}>
+                {openNav.map((item, i) => {
                     return (
                         <div
+                            key={i}
                             className={`${
                                 content === item
                                     ? "bg-[#1e1e1e] border-b-0"
@@ -29,7 +37,7 @@ const TabBar = (props) => {
                                         ? Beezi
                                         : item === "Va'ivrach"
                                         ? Vaivrach
-                                        : item === "Impact by Mati"
+                                        : item === "Impact"
                                         ? Impact
                                         : item === "LabSuit"
                                         ? Labsuit
@@ -37,7 +45,7 @@ const TabBar = (props) => {
                                         ? Teco
                                         : item === "John Bryce"
                                         ? JohnBryce
-                                        : item === "Moreshet Ya'akov Collage"
+                                        : item === "Moreshet"
                                         ? Moreshet
                                         : Free
                                 }
@@ -59,7 +67,7 @@ const TabBar = (props) => {
                     );
                 })}
             </div>
-            <div className="ml-auto">
+            <div className="ml-auto w-40 min-w-40 border border-[#37373d]">
                 <ContactBar />
             </div>
         </div>

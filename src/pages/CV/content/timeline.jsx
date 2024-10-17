@@ -1,34 +1,68 @@
-import Free from "../assets/logoPic2.jpg";
+import Free from "../assets/logoPic2.png";
 import Leminda from "../assets/leminda.svg";
 import Vaivrach from "../assets/vaivrach.jpg";
 import Beezi from "../assets/BeeziB.svg";
 import Impact from "../assets/impactB.png";
-import Labsuit from "../assets/labsuit.png";
+// import Labsuit from "../assets/labsuit.png";
 import JohnBryce from "../assets/JohnBryce.jpg";
-import Moreshet from "../assets/מורשת יעקב.jpeg";
+// import Moreshet from "../assets/מורשת יעקב.jpeg";
 import Teco from "../assets/teco.png";
+// import JobsIcon from "../tooltip/assets/work.svg";
+// import ProjectsIcon from "../tooltip/assets/info.svg";
+// import SchoolIcon from "../tooltip/assets/education.svg";
 const Timeline = (props) => {
     const { skill, setContent, content } = props;
     return (
         <div
-            className={`relative min-w-36 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] max-h-full scrollbar overflow-auto ${
-                // skill !== 0 ? "border-yellow-500" : ""
-                ""
-            }`}>
-            {/* <div className="bg-gradient-to-br from-fuchsia-800 to-[#1e1e1e] to-70% mx-auto rotate-45 translate-x-1/4 h-4 w-4"></div> */}
+            className={`relative w-40 min-w-40 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] max-h-full scrollbar overflow-y-auto`}>
             <div
-                className={`absolute left-[50%] top-0 opacity-35 bg-fuchsia-800 mx-auto h-full w-1 z-10 ${
-                    // skill !== 0 ? "bg-yellow-500" : "bg-fuchsia-800"
-                    ""
-                }`}></div>
+                className={`absolute left-[50%] top-0 opacity-35 bg-fuchsia-800 mx-auto h-full w-1 z-10`}></div>
             <div
                 className={`mt-3 mb-2 ml-2 underline text-xs ${
                     skill !== 0 ? "text-yellow-500" : "text-fuchsia-200"
                 }`}>
                 Professional timeline:
             </div>
+            {/* <div className="grid grid-rows-10 grid-flow-col gap-1">
+                <div className="p-1 flex">
+                    <img src={JobsIcon} alt="Jobs" className="h-7 w-7 " />
+                </div>
+                <div className="rounded-sm p-1 border border-slate-200">
+                    <img src={Free} alt="Freelance" className="h-7 w-7 m-auto" />
+                </div>
+                <div className="row-span-2 rounded-sm p-1 border border-slate-200 flex">
+                    <img src={Leminda} alt="Leminda.AI" className=" h-7 w-7 m-auto" />
+                </div>
+                <div className="row-span-3 rounded-sm p-1 border border-slate-200 flex">
+                    <img src={Vaivrach} alt="Va'ivrach" className="row-span-3 h-7 w-7 m-auto" />
+                </div>
+                <div className="row-span-1 rounded-sm p-1 border border-slate-200 flex">
+                    <img src={Impact} alt="Impact" className=" h-7 w-7 m-auto" />
+                </div>
+                <div className="row-span-2 rounded-sm p-1 border border-slate-200"></div>
+                <div className="p-1 flex">
+                    <img src={ProjectsIcon} alt="Progects" className=" h-7 w-7 m-auto" />
+                </div>
+                <div className="row-span-3 h-7 w-7"></div>
+                <img src={Beezi} alt="Beezi" className=" h-7 w-7" />
+                <div className="row-span-5 h-7 w-7"></div>
+                <img src={SchoolIcon} alt="School" className=" h-7 w-7" />
+                <div className="row-span-7 h-7 w-7"></div>
+                <img src={JohnBryce} alt="John Bryce" className=" h-7 w-7" />
+                <img src={Teco} alt="Teco1" className=" h-7 w-7" />
+                <div className="text-sm rotate-90">2024</div>
+                <div className="text-sm rotate-90">2023</div>
+                <div className="text-sm rotate-90">2022</div>
+                <div className="text-sm rotate-90">2021</div>
+                <div className="text-sm rotate-90">2020</div>
+                <div className="text-sm rotate-90">2019</div>
+                <div className="text-sm rotate-90">2018</div>
+                <div className="text-sm rotate-90">2017</div>
+                <div className="text-sm rotate-90">2016</div>
+                <div className="text-sm rotate-90">2015</div>
+            </div> */}
             <div
-                className={`flex mt-6 cursor-pointer ${
+                className={`flex mt-6 cursor-pointer hover:bg-[#37373d] ${
                     content === "Freelance" ? "bg-[#303030]" : ""
                 }`}
                 onClick={() => setContent("Freelance")}>
@@ -41,7 +75,9 @@ const Timeline = (props) => {
                 <div className="my-auto">2024-today</div>
             </div>
             <div
-                className={`flex cursor-pointer ${content === "Leminda.AI" ? "bg-[#303030]" : ""}`}
+                className={`flex cursor-pointer hover:bg-[#37373d] ${
+                    content === "Leminda.AI" ? "bg-[#303030]" : ""
+                }`}
                 onClick={() => setContent("Leminda.AI")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 9 && skill !== 4) ||
@@ -59,7 +95,9 @@ const Timeline = (props) => {
                 <div className="my-auto">2022-2023</div>
             </div>
             <div
-                className={`flex cursor-pointer ${content === "Beezi" ? "bg-[#303030]" : ""}`}
+                className={`flex cursor-pointer hover:bg-[#37373d] ${
+                    content === "Beezi" ? "bg-[#303030]" : ""
+                }`}
                 onClick={() => setContent("Beezi")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 4) ||
@@ -79,7 +117,9 @@ const Timeline = (props) => {
                 <div className="my-auto">2020</div>
             </div>
             <div
-                className={`flex cursor-pointer ${content === "Va'ivrach" ? "bg-[#303030]" : ""}`}
+                className={`flex cursor-pointer hover:bg-[#37373d] ${
+                    content === "Va'ivrach" ? "bg-[#303030]" : ""
+                }`}
                 onClick={() => setContent("Va'ivrach")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 4) ||
@@ -95,10 +135,10 @@ const Timeline = (props) => {
                 <div className="my-auto">2017-2021</div>
             </div>
             <div
-                className={`flex cursor-pointer ${
-                    content === "Impact by Mati" ? "bg-[#303030]" : ""
+                className={`flex cursor-pointer hover:bg-[#37373d] ${
+                    content === "Impact" ? "bg-[#303030]" : ""
                 }`}
-                onClick={() => setContent("Impact by Mati")}>
+                onClick={() => setContent("Impact")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {((skill >= 1 && skill <= 3) ||
                         (skill >= 13 && skill <= 15) ||
@@ -115,7 +155,9 @@ const Timeline = (props) => {
                 <div className="my-auto">2016</div>
             </div>
             <div
-                className={`flex cursor-pointer ${content === "John Bryce" ? "bg-[#303030]" : ""}`}
+                className={`flex cursor-pointer hover:bg-[#37373d] ${
+                    content === "John Bryce" ? "bg-[#303030]" : ""
+                }`}
                 onClick={() => setContent("John Bryce")}>
                 <div className="my-auto ml-auto">2015</div>
                 <div className="h-8 w-8 relative rounded-full m-2">
@@ -135,8 +177,10 @@ const Timeline = (props) => {
                     />
                 </div>
             </div>
-            <div
-                className={`flex cursor-pointer ${content === "LabSuit" ? "bg-[#303030]" : ""}`}
+            {/* <div
+                className={`flex cursor-pointer hover:bg-[#37373d] ${
+                    content === "LabSuit" ? "bg-[#303030]" : ""
+                }`}
                 onClick={() => setContent("LabSuit")}>
                 <div className="h-8 w-8 relative rounded-full m-2">
                     {skill === 7 && (
@@ -145,9 +189,11 @@ const Timeline = (props) => {
                     <img src={Labsuit} alt="LabSuit" className="relative h-8 w-8 rounded-full" />
                 </div>
                 <div className="my-auto">2015</div>
-            </div>
+            </div> */}
             <div
-                className={`flex cursor-pointer ${content === "Teco1" ? "bg-[#303030]" : ""}`}
+                className={`flex pb-16 lg:pb-0 cursor-pointer hover:bg-[#37373d] ${
+                    content === "Teco1" ? "bg-[#303030]" : ""
+                }`}
                 onClick={() => setContent("Teco1")}>
                 <div className="ml-auto my-auto">2014</div>
                 <div className="h-8 w-8 relative rounded-full m-2">
@@ -157,14 +203,14 @@ const Timeline = (props) => {
                     <img src={Teco} alt="Teco-1" className="relative h-8 w-8 rounded-full" />
                 </div>
             </div>
-            <div
-                className={`flex pb-16 lg:pb-0 cursor-pointer ${
-                    content === "Moreshet Ya'akov Collage" ? "bg-[#303030]" : ""
+            {/* <div
+                className={`flex pb-16 lg:pb-0 cursor-pointer hover:bg-[#37373d] ${
+                    content === "Moreshet" ? "bg-[#303030]" : ""
                 }`}
-                onClick={() => setContent("Moreshet Ya'akov Collage")}>
+                onClick={() => setContent("Moreshet")}>
                 <div className="my-auto ml-auto">2011-2014</div>
                 <img src={Moreshet} alt="MoreshetYaakov" className="h-8 w-8 rounded-full m-2" />
-            </div>
+            </div> */}
         </div>
     );
 };

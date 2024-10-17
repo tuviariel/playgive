@@ -40,15 +40,15 @@ export const Content = (props) => {
 
     // console.log(openNav);
     return (
-        <div className="block">
+        <div className="block w-full max-w-full">
             <TabBar
                 openNav={openNav}
                 closeTag={closeTag}
                 content={content}
                 setContent={setContent}
             />
-            <div className="flex h-full max-h-[330px] lg:max-h-[550px]">
-                <div className="scrollbar overflow-y-auto pb-16 lg:pb-0">
+            <div className="flex h-full max-h-[330px] lg:max-h-[550px] w-full">
+                <div className="scrollbar overflow-y-auto pb-16 lg:pb-0 w-full">
                     <div className="text-slate-50 mx-6 lg:mx-12 my-5 lg:my-10">
                         {content === "Welcome" ? (
                             <Start
@@ -64,7 +64,7 @@ export const Content = (props) => {
                             <Beezi setSkill={setSkill} />
                         ) : content === "Va'ivrach" ? (
                             <Vaivrach setSkill={setSkill} />
-                        ) : content === "Impact by Mati" ? (
+                        ) : content === "Impact" ? (
                             <Impact setSkill={setSkill} />
                         ) : content === "LabSuit" ? (
                             <Labsuit setSkill={setSkill} />
@@ -72,7 +72,7 @@ export const Content = (props) => {
                             <JB setSkill={setSkill} />
                         ) : content === "Teco1" ? (
                             <Teco setSkill={setSkill} />
-                        ) : content === "Moreshet Ya'akov Collage" ? (
+                        ) : content === "Moreshet" ? (
                             <Moreshet setSkill={setSkill} />
                         ) : content === "Summary" ? (
                             <Info setSkill={setSkill} />
@@ -81,7 +81,9 @@ export const Content = (props) => {
                         )}
                     </div>
                 </div>
-                <Timeline skill={skill} content={content} setContent={setContent} />
+                <div className="w-40 min-w-40">
+                    <Timeline skill={skill} content={content} setContent={setContent} />
+                </div>
             </div>
             <Terminal />
         </div>

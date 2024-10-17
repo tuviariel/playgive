@@ -26,7 +26,7 @@ import VSCode from "../assets/vs-code.svg";
 const Clickable = (props) => {
     const { code, setSkill } = props;
     const codes = [
-        ,
+        "",
         "VSCode",
         "React",
         "JavaScript",
@@ -54,7 +54,7 @@ const Clickable = (props) => {
         "Zeplin",
     ];
     const images = [
-        ,
+        "",
         VSCode,
         react,
         js,
@@ -88,9 +88,9 @@ const Clickable = (props) => {
             <img
                 src={images[code]}
                 alt={codes[code]}
-                className={`h-5 w-4 inline-flex ${code === 5 ? "rounded-full" : ""} ${
-                    code === 5 || code === 12 ? "bg-white" : ""
-                }`}
+                className={`h-5 w-4 inline-flex ${
+                    code === 5 || code === 23 ? "rounded-full" : ""
+                } ${code === 5 || code === 12 || code === 23 ? "bg-white" : ""}`}
             />
             {codes[code]}
         </span>

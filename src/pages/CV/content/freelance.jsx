@@ -1,4 +1,4 @@
-import FreeLogo from "../assets/logoPic2.jpg";
+import FreeLogo from "../assets/logoPic2.png";
 import Clickable from "./clickable";
 const Freelance = (props) => {
     const { setSkill } = props;

@@ -4,7 +4,6 @@ import JB from "../../assets/JohnBryce.jpg";
 import Teco from "../../assets/teco.png";
 import Moreshet from "../../assets/מורשת יעקב.jpeg";
 import Work from "../../assets/job.svg";
-import Type from "../../assets/work-type.svg";
 import Years from "../../assets/year.svg";
 
 export const Education = (props) => {
@@ -12,7 +11,7 @@ export const Education = (props) => {
     const exp = [
         ["John Bryce", "2015", "JavaEE Developer course", 0],
         ["Teco1", "2014", "QA course", 1],
-        ["Moreshet Ya'akov Collage", "2011 - 2014", "BEd", 2],
+        // ["Moreshet", "2011 - 2014", "BEd", 2],
     ];
     const [open, setOpen] = useState([true, false, false]);
     const [rerender, setRerender] = useState();
