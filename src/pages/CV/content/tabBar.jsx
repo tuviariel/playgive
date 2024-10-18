@@ -10,7 +10,7 @@ import Moreshet from "../assets/מורשת יעקב.jpeg";
 import Teco from "../assets/teco.png";
 const TabBar = (props) => {
     const { openNav, closeTag, content, setContent } = props;
-    const barWidth = window.screen.width - 160 - 56 - 224 - 20;
+    const barWidth = window.screen.width - 160 - 56 - 224 - 40;
     // window.screen.width > 1024
     //     ? window.screen.width - 160 - 56 - 224 //for lg: screen - 160timeline - 56tooltip - 224action
     //     : window.screen.width - 160 - 56 - 176 - 20; //for lg: screen - 160 - 56 - 176action -14phoneAction

@@ -34,9 +34,8 @@ const CV = () => {
                 </div>
                 <div className="text-base mb-2">
                     It seems you are using a Phone to view my CV site. It is recommended to move to
-                    a desk-top screen. If that is not posable at the moment, after changing the view
-                    to desk-top mode, you may try to turn the phone on it's side to see how it
-                    shows...
+                    a desk-top screen. If that is not posable at the moment you may try to turn the
+                    phone on it's side to see how it shows...
                 </div>
                 <div className="text-base mb-2">
                     Anyway, feel free to contact me in any way you'd like through the fallowing
