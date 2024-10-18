@@ -12,8 +12,8 @@ const TabBar = (props) => {
     const { openNav, closeTag, content, setContent } = props;
     const barWidth =
         window.screen.width > 1024
-            ? window.screen.width - 160 - 56 - 320 //for lg: screen - 160 - 56 - 320 = ~1000~px;
-            : window.screen.width - 160 - 56 - 176; //for lg: screen - 160 - 56 - 176 = ~348px;
+            ? window.screen.width - 160 - 56 - 320 //for lg: screen - 160timeline - 56tooltip - 320action = ~1000~px;
+            : window.screen.width - 160 - 56 - 176 - 20; //for lg: screen - 160 - 56 - 176action -14phoneAction = ~348px;
     // console.log(barWidth);
     return (
         <div className="flex h-8 w-full">
