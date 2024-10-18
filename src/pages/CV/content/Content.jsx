@@ -15,7 +15,7 @@ import Moreshet from "./Moreshet";
 import Info from "./info";
 
 export const Content = (props) => {
-    const { content, setContent, setActionContent, setSkill, skill } = props;
+    const { content, setContent, setActionContent, setSkill, skill, route } = props;
     const [openNav, setOpenNav] = useState(["Welcome", "Summary"]);
     const [rerender, setRerender] = useState();
 
@@ -82,7 +82,12 @@ export const Content = (props) => {
                     </div>
                 </div>
                 <div className="w-40 min-w-40">
-                    <Timeline skill={skill} content={content} setContent={setContent} />
+                    <Timeline
+                        skill={skill}
+                        content={content}
+                        setContent={setContent}
+                        route={route}
+                    />
                 </div>
             </div>
             <Terminal />

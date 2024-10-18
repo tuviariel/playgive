@@ -3,15 +3,15 @@ import Leminda from "../assets/leminda.svg";
 import Vaivrach from "../assets/vaivrach.jpg";
 import Beezi from "../assets/BeeziB.svg";
 import Impact from "../assets/impactB.png";
-// import Labsuit from "../assets/labsuit.png";
+import Labsuit from "../assets/labsuit.png";
 import JohnBryce from "../assets/JohnBryce.jpg";
-// import Moreshet from "../assets/מורשת יעקב.jpeg";
+import Moreshet from "../assets/מורשת יעקב.jpeg";
 import Teco from "../assets/teco.png";
 // import JobsIcon from "../tooltip/assets/work.svg";
 // import ProjectsIcon from "../tooltip/assets/info.svg";
 // import SchoolIcon from "../tooltip/assets/education.svg";
 const Timeline = (props) => {
-    const { skill, setContent, content } = props;
+    const { skill, setContent, content, route } = props;
     return (
         <div
             className={`relative w-40 min-w-40 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] max-h-full scrollbar overflow-y-auto`}>
@@ -177,23 +177,29 @@ const Timeline = (props) => {
                     />
                 </div>
             </div>
-            {/* <div
-                className={`flex cursor-pointer hover:bg-[#37373d] ${
-                    content === "LabSuit" ? "bg-[#303030]" : ""
-                }`}
-                onClick={() => setContent("LabSuit")}>
-                <div className="h-8 w-8 relative rounded-full m-2">
-                    {skill === 7 && (
-                        <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
-                    )}
-                    <img src={Labsuit} alt="LabSuit" className="relative h-8 w-8 rounded-full" />
+            {(route === "/qa" || route === "/all") && (
+                <div
+                    className={`flex cursor-pointer hover:bg-[#37373d] ${
+                        content === "LabSuit" ? "bg-[#303030]" : ""
+                    }`}
+                    onClick={() => setContent("LabSuit")}>
+                    <div className="h-8 w-8 relative rounded-full m-2">
+                        {skill === 7 && (
+                            <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
+                        )}
+                        <img
+                            src={Labsuit}
+                            alt="LabSuit"
+                            className="relative h-8 w-8 rounded-full"
+                        />
+                    </div>
+                    <div className="my-auto">2015</div>
                 </div>
-                <div className="my-auto">2015</div>
-            </div> */}
+            )}
             <div
-                className={`flex pb-16 lg:pb-0 cursor-pointer hover:bg-[#37373d] ${
-                    content === "Teco1" ? "bg-[#303030]" : ""
-                }`}
+                className={`flex ${
+                    route !== "/all" ? "pb-16 lg:pb-0" : ""
+                } cursor-pointer hover:bg-[#37373d] ${content === "Teco1" ? "bg-[#303030]" : ""}`}
                 onClick={() => setContent("Teco1")}>
                 <div className="ml-auto my-auto">2014</div>
                 <div className="h-8 w-8 relative rounded-full m-2">
@@ -203,14 +209,16 @@ const Timeline = (props) => {
                     <img src={Teco} alt="Teco-1" className="relative h-8 w-8 rounded-full" />
                 </div>
             </div>
-            {/* <div
-                className={`flex pb-16 lg:pb-0 cursor-pointer hover:bg-[#37373d] ${
-                    content === "Moreshet" ? "bg-[#303030]" : ""
-                }`}
-                onClick={() => setContent("Moreshet")}>
-                <div className="my-auto ml-auto">2011-2014</div>
-                <img src={Moreshet} alt="MoreshetYaakov" className="h-8 w-8 rounded-full m-2" />
-            </div> */}
+            {route === "/all" && (
+                <div
+                    className={`flex pb-16 lg:pb-0 cursor-pointer hover:bg-[#37373d] ${
+                        content === "Moreshet" ? "bg-[#303030]" : ""
+                    }`}
+                    onClick={() => setContent("Moreshet")}>
+                    <div className="my-auto ml-auto">2011-2014</div>
+                    <img src={Moreshet} alt="MoreshetYaakov" className="h-8 w-8 rounded-full m-2" />
+                </div>
+            )}
         </div>
     );
 };

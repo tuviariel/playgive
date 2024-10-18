@@ -12,8 +12,13 @@ const CV = () => {
     const [actionContent, setActionContent] = useState("experience");
     const [content, setContent] = useState("Welcome");
     const [skill, setSkill] = useState(0);
+    const [route, setRoute] = useState("/");
     const tooltips = ["experience", "education", "skills", "Summary"];
-
+    const path = window.location.pathname;
+    useEffect(() => {
+        // console.log(path);
+        setRoute(path);
+    }, [path]);
     useEffect(() => {
         if (skill > 0) {
             setTimeout(() => {
@@ -33,14 +38,10 @@ const CV = () => {
                     I'm Tuvia Ariel, a Full Stack / Front End Web Developer
                 </div>
                 <div className="text-base mb-2">
-                    It seems you are using a Phone to view my CV site. It is recommended to move to
-                    a desk-top screen. If that is not posable at the moment you may try to turn the
-                    phone on it's side to see how it shows (might not work properly, depending on
-                    your device)...
+                    You are using a Phone to view my CV site - please turn the phone on it's side...
                 </div>
                 <div className="text-base mb-2">
-                    Anyway, feel free to contact me in any way you'd like through the fallowing
-                    links:
+                    Feel free to contact me in any way you'd like through the fallowing links:
                 </div>
                 <div className="ml-auto mb-2">
                     <ContactBar />
@@ -87,6 +88,7 @@ const CV = () => {
                             content={content}
                             setContent={setContent}
                             setSkill={setSkill}
+                            route={route}
                         />
                     </div>
                     <div className="bg-[#1e1e1e] w-full max-w-full">
@@ -96,6 +98,7 @@ const CV = () => {
                             setActionContent={setActionContent}
                             skill={skill}
                             setSkill={setSkill}
+                            route={route}
                         />
                     </div>
                 </div>
