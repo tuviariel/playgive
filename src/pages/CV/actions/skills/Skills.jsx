@@ -80,18 +80,18 @@ export const Skills = (props) => {
                         title="notice the timeline when clicking..."
                         onClick={() => setSkill(ex[3])}>
                         <img src={ex[2]} alt={ex[0]} className="h-8 w-8 bg-slate-100 rounded-md" />
-                        <div className="sm:hidden lg:block ml-2">
+                        <div className="block ml-2">
                             <div className="font-bold">{ex[0]}</div>
                             <div className="font-normal -mt-1">
                                 {(ex[1] === 1 ? "One year" : ex[1] + " Years") + " of experience."}
                             </div>
                         </div>
-                        <div className="lg:hidden sm:block ml-2">
+                        {/* <div className="lg:hidden sm:block ml-2">
                             <div className="font-bold">{ex[0]}</div>
                             <div className="font-normal -mt-1">
                                 {(ex[1] === 1 ? "1 year" : ex[1] + " Years") + " exp."}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 );
             })}

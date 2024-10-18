@@ -34,8 +34,9 @@ const CV = () => {
                 </div>
                 <div className="text-base mb-2">
                     It seems you are using a Phone to view my CV site. It is recommended to move to
-                    a desk-top screen. If that is not posable at the moment you may try to turn the
-                    phone on it's side to see if it shows...
+                    a desk-top screen. If that is not posable at the moment, after changing the view
+                    to desk-top mode, you may try to turn the phone on it's side to see how it
+                    shows...
                 </div>
                 <div className="text-base mb-2">
                     Anyway, feel free to contact me in any way you'd like through the fallowing
@@ -59,7 +60,7 @@ const CV = () => {
                 <div className="bg-[#3c3c3c] h-10 md:h-14 w-full p-1 md:p-3 flex text-gray-300 relative">
                     <img src={portrait} alt="my-logo" className="mr-5 h-8  w-auto rounded-full" />
                     <div className="mt-1">Tuvia Ariel</div>
-                    <div className="mt-1 ml-auto">Full Stack / Front End Web Developer</div>
+                    <div className="mt-1 ml-auto mr-1">Full Stack / Front End Web Developer</div>
                     <div className="absolute translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2 bg-[#464646] border border-[#505050] rounded-md py-auto px-3 md:px-16 flex ">
                         CV review
                     </div>
@@ -80,7 +81,7 @@ const CV = () => {
                         <img src={click} alt="click" className="h-8 w-8 mx-auto" />
                         <img src={VSCode} alt="VSCode" className="mt-auto mb-16 mx-auto h-8 w-8" />
                     </div>
-                    <div className="sm:w-44 sm:min-w-44 lg:w-80 lg:min-w-80 bg-[#252526]">
+                    <div className="w-56 min-w-56 bg-[#252526]">
                         <Actions
                             action={actionContent}
                             content={content}
