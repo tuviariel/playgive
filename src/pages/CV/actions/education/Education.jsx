@@ -14,7 +14,7 @@ export const Education = (props) => {
         // ["Moreshet", "2011 - 2014", "BEd", 2],
     ];
     const [open, setOpen] = useState([true, false, false]);
-    const [rerender, setRerender] = useState();
+    // const [rerender, setRerender] = useState();
     // console.log(content);
     return (
         <>
@@ -34,10 +34,11 @@ export const Education = (props) => {
                                 }`}
                                 onClick={() => {
                                     setOpen((prev) => {
-                                        let item = !prev[i];
-                                        return [...prev, (prev[i] = item)];
+                                        const newState = [...prev];
+                                        newState[i] = !prev[i];
+                                        return newState;
                                     });
-                                    setRerender(!rerender);
+                                    // setRerender(!rerender);
                                 }}
                             />
 
@@ -71,10 +72,6 @@ export const Education = (props) => {
                                             "."}
                                     </div>
                                 </div>
-                                {/* <div className="flex">
-                                    <img src={Type} alt="Job Type" className="h-6 w-6" />
-                                    <div className="ml-0.5">{ex[4]}</div>
-                                </div> */}
                             </div>
                         ) : (
                             <></>

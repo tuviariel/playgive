@@ -21,7 +21,7 @@ export const Experience = (props) => {
         // ["LabSuit", "2014", "QA", 5, "Internship job"],
     ];
     const [open, setOpen] = useState([false, true, false, true, false, false]);
-    const [rerender, setRerender] = useState();
+    // const [rerender, setRerender] = useState();
     // console.log(content);
     return (
         <>
@@ -41,10 +41,11 @@ export const Experience = (props) => {
                                 }`}
                                 onClick={() => {
                                     setOpen((prev) => {
-                                        let item = !prev[i];
-                                        return [...prev, (prev[i] = item)];
+                                        const newState = [...prev];
+                                        newState[i] = !prev[i];
+                                        return newState;
                                     });
-                                    setRerender(!rerender);
+                                    // setRerender(!rerender);
                                 }}
                             />
                             <img
