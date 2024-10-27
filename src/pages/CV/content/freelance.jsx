@@ -10,10 +10,9 @@ const Freelance = (props) => {
             </div>
             <div className="mb-6">
                 <span className="text-fuchsia-600 mr-2">2023 - Today</span>
-                <span className="text-yellow-500 mr-2">Freelance: Full-Stack Web Developer,</span>
-                Due to the military situation in the Upper Galilee I have been forced to put off a
-                new job search, instead I am investing my energy into acquiring new in more
-                technologies.
+                <span className="text-yellow-500 mr-2">Freelance: Full-Stack Web Developer,</span>I
+                am investing my energy into broadening my skill set across varied technologies while
+                continuing to investigate new employment opportunities.
             </div>
             <ul className="list-disc text-base mb-12 w-full">
                 <li>

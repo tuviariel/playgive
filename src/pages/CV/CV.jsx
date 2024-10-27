@@ -57,7 +57,7 @@ const CV = () => {
                 </div>
                 <div className="mb-2 ml-3">Tuvia</div>
             </div>
-            <div className="h-screen w-screen overflow-hidden hidden sm:block">
+            <div className="h-screen w-dvw overflow-hidden hidden sm:block">
                 <div className="bg-[#3c3c3c] h-10 md:h-14 w-full p-1 md:p-3 flex text-gray-300 relative">
                     <img src={portrait} alt="my-logo" className="mr-5 h-8  w-auto rounded-full" />
                     <div className="mt-1">Tuvia Ariel</div>
