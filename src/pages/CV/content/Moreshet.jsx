@@ -1,10 +1,18 @@
+import { useEffect, useRef } from "react";
 import MoreshetLogo from "../assets/מורשת יעקב.jpeg";
 
 const Moreshet = (props) => {
-    const { setContent } = props;
+    const { content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <div className="flex">
+            <div className="flex" ref={title}>
                 <img src={MoreshetLogo} alt="Moreshet Ya'akov College" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Moreshet Ya'akov College</div>
             </div>

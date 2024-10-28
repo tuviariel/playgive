@@ -1,11 +1,19 @@
+import { useEffect, useRef } from "react";
 import InfoLogo from "../assets/logoPic2.png";
 import Clickable from "./clickable";
 
 const Info = (props) => {
-    const { setSkill } = props;
+    const { setSkill, content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <div className="flex mb-3">
+            <div className="flex mb-3" ref={title}>
                 <img src={InfoLogo} alt="Info" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">
                     Summary <span className="text-base">[Update: 10/2024]</span>

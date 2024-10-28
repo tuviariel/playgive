@@ -1,12 +1,20 @@
+import { useEffect, useRef } from "react";
 import ImpactLogo from "../assets/impactB.png";
 import globe from "../assets/globe.svg";
 import Clickable from "./clickable";
 
 const Impact = (props) => {
-    const { setSkill } = props;
+    const { setSkill, content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <div className="flex">
+            <div className="flex" ref={title}>
                 <img src={ImpactLogo} alt="Impact" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Impact by Mati</div>
                 <a href="https://impact-98ffa.web.app/" target="_blank" className="text-xs flex">

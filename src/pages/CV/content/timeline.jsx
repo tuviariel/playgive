@@ -14,12 +14,12 @@ const Timeline = (props) => {
     const { skill, setContent, content, route } = props;
     return (
         <div
-            className={`relative w-40 min-w-40 ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] max-h-full scrollbar overflow-y-auto`}>
-            <div
-                className={`absolute left-[50%] top-0 opacity-35 bg-fuchsia-800 mx-auto h-full w-1 z-10`}></div>
+            className={`relative w-40 min-w-40 h-full max-h-[330px] lg:max-h-[550px] ml-auto text-slate-100 text-justify border border-t-0 border-b-0 border-[#383838] scrollbar overflow-y-auto`}>
+            {/* <div
+                className={`absolute left-[50%] top-0 opacity-35 bg-fuchsia-800 mx-auto h-full w-1 z-10`}></div> */}
             <div
                 className={`mt-3 mb-2 ml-2 underline text-xs ${
-                    skill !== 0 ? "text-yellow-500" : "text-fuchsia-200"
+                    skill !== 0 ? "text-yellow-500" : "text-fuchsia-100"
                 }`}>
                 Professional timeline:
             </div>

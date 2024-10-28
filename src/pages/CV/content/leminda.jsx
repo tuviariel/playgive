@@ -1,12 +1,20 @@
+import { useEffect, useRef } from "react";
 import LemindaLogo from "../assets/leminda.svg";
 import globe from "../assets/globe.svg";
 import Clickable from "./clickable";
 
 const Leminda = (props) => {
-    const { setSkill } = props;
+    const { setSkill, content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <div className="flex mb-4">
+            <div className="flex mb-4" ref={title}>
                 <img src={LemindaLogo} alt="Leminda.AI" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Leminda.AI</div>
                 <a href="https://research.leminda.com" target="_blank">

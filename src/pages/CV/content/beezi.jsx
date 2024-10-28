@@ -1,11 +1,19 @@
+import { useEffect, useRef } from "react";
 import BeeziLogo from "../assets/BeeziB.svg";
 import Clickable from "./clickable";
 
 const Beezi = (props) => {
-    const { setSkill } = props;
+    const { setSkill, content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <div className="flex">
+            <div className="flex" ref={title}>
                 <img src={BeeziLogo} alt="Beezi" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Beezi</div>
             </div>

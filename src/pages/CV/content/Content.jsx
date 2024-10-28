@@ -55,33 +55,34 @@ export const Content = (props) => {
                                 setActionContent={setActionContent}
                                 setSkill={setSkill}
                                 setContent={setContent}
+                                content={content}
                             />
                         ) : content === "Freelance" ? (
-                            <Freelance setSkill={setSkill} />
+                            <Freelance setSkill={setSkill} content={content} />
                         ) : content === "Leminda.AI" ? (
-                            <Leminda setSkill={setSkill} />
+                            <Leminda setSkill={setSkill} content={content} />
                         ) : content === "Beezi" ? (
-                            <Beezi setSkill={setSkill} />
+                            <Beezi setSkill={setSkill} content={content} />
                         ) : content === "Va'ivrach" ? (
-                            <Vaivrach setSkill={setSkill} />
+                            <Vaivrach setSkill={setSkill} content={content} />
                         ) : content === "Impact" ? (
-                            <Impact setSkill={setSkill} />
+                            <Impact setSkill={setSkill} content={content} />
                         ) : content === "LabSuit" ? (
-                            <Labsuit setSkill={setSkill} />
+                            <Labsuit setSkill={setSkill} content={content} />
                         ) : content === "John Bryce" ? (
-                            <JB setSkill={setSkill} />
+                            <JB setSkill={setSkill} content={content} />
                         ) : content === "Teco1" ? (
-                            <Teco setSkill={setSkill} />
+                            <Teco setSkill={setSkill} content={content} />
                         ) : content === "Moreshet" ? (
-                            <Moreshet setSkill={setSkill} />
+                            <Moreshet content={content} />
                         ) : content === "Summary" ? (
-                            <Info setSkill={setSkill} />
+                            <Info setSkill={setSkill} content={content} />
                         ) : (
                             <></>
                         )}
                     </div>
                 </div>
-                <div className="w-40 min-w-40">
+                <div className="w-40 min-w-40 ">
                     <Timeline
                         skill={skill}
                         content={content}

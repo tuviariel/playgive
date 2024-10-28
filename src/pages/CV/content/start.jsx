@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import ExperienceLink from "../assets/experinceLink.svg";
 import EducationLink from "../assets/educationLink.svg";
 import SkillsLink from "../assets/skillsLink.svg";
@@ -7,10 +8,22 @@ import Clickable from "./clickable";
 import portrait from "../assets/logoPic2.png";
 
 const Start = (props) => {
-    const { setActionContent, setSkill, setContent } = props;
+    const { setActionContent, setSkill, setContent, content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <img src={portrait} alt="my-logo" className="h-14 w-auto rounded-full mb-2" />
+            <img
+                src={portrait}
+                alt="my-logo"
+                className="h-14 w-auto rounded-full mb-2"
+                ref={title}
+            />
             <div className="text-xl mb-2">Welcome to my CV site</div>
             <div className="text-base mb-12 w-full">
                 <div className="mb-2">Everything is clickable!</div>

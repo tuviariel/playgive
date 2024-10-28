@@ -1,11 +1,19 @@
+import { useEffect, useRef } from "react";
 import VaivrachLogo from "../assets/vaivrachL.png";
 import Clickable from "./clickable";
 
 const Vaivrach = (props) => {
-    const { setSkill } = props;
+    const { setSkill, content } = props;
+    const title = useRef(null);
+    useEffect(() => {
+        title?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+        });
+    }, [content]);
     return (
         <>
-            <div className="flex">
+            <div className="flex" ref={title}>
                 <img src={VaivrachLogo} alt="Va'ivrach" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">Va'ivrach</div>
             </div>
