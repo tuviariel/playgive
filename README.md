@@ -1,3 +1,10 @@
+this project is deployed on the firebase hosting:
+in order to update the server:
+
+-   npm run build
+-   npx firebase deploy
+    should also update git repository (master).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
