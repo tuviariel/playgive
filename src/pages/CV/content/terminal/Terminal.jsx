@@ -70,6 +70,9 @@ export const Terminal = () => {
                                                     "_blank"
                                                 );
                                             }
+                                            setTimeout(() => {
+                                                setWorking(false);
+                                            }, 2000);
                                         }, 3000);
                                     }
                                 } else if (e.key === "ArrowUp") {
