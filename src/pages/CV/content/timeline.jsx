@@ -178,37 +178,45 @@ const Timeline = (props) => {
                 </div>
             </div>
             {(route === "/qa" || route === "/all") && (
-                <div
-                    className={`flex cursor-pointer hover:bg-[#37373d] ${
-                        content === "LabSuit" ? "bg-[#303030]" : ""
-                    }`}
-                    onClick={() => setContent("LabSuit")}>
-                    <div className="h-8 w-8 relative rounded-full m-2">
-                        {skill === 7 && (
-                            <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
-                        )}
-                        <img
-                            src={Labsuit}
-                            alt="LabSuit"
-                            className="relative h-8 w-8 rounded-full"
-                        />
+                <>
+                    <div
+                        className={`flex cursor-pointer hover:bg-[#37373d] ${
+                            content === "LabSuit" ? "bg-[#303030]" : ""
+                        }`}
+                        onClick={() => setContent("LabSuit")}>
+                        <div className="h-8 w-8 relative rounded-full m-2">
+                            {skill === 7 && (
+                                <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
+                            )}
+                            <img
+                                src={Labsuit}
+                                alt="LabSuit"
+                                className="relative h-8 w-8 rounded-full"
+                            />
+                        </div>
+                        <div className="my-auto">2015</div>
                     </div>
-                    <div className="my-auto">2015</div>
-                </div>
+                    <div
+                        className={`flex ${
+                            route !== "/all" ? "pb-16 lg:pb-0" : ""
+                        } cursor-pointer hover:bg-[#37373d] ${
+                            content === "Teco1" ? "bg-[#303030]" : ""
+                        }`}
+                        onClick={() => setContent("Teco1")}>
+                        <div className="ml-auto my-auto">2014</div>
+                        <div className="h-8 w-8 relative rounded-full m-2">
+                            {(skill === 7 || skill === 21 || skill === 17 || skill === 24) && (
+                                <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
+                            )}
+                            <img
+                                src={Teco}
+                                alt="Teco-1"
+                                className="relative h-8 w-8 rounded-full"
+                            />
+                        </div>
+                    </div>
+                </>
             )}
-            <div
-                className={`flex ${
-                    route !== "/all" ? "pb-16 lg:pb-0" : ""
-                } cursor-pointer hover:bg-[#37373d] ${content === "Teco1" ? "bg-[#303030]" : ""}`}
-                onClick={() => setContent("Teco1")}>
-                <div className="ml-auto my-auto">2014</div>
-                <div className="h-8 w-8 relative rounded-full m-2">
-                    {(skill === 7 || skill === 21 || skill === 17 || skill === 24) && (
-                        <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />
-                    )}
-                    <img src={Teco} alt="Teco-1" className="relative h-8 w-8 rounded-full" />
-                </div>
-            </div>
             {route === "/all" && (
                 <div
                     className={`flex pb-16 lg:pb-0 cursor-pointer hover:bg-[#37373d] ${

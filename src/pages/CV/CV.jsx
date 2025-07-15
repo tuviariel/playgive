@@ -34,9 +34,7 @@ const CV = () => {
                     <img src={VSCode} alt="VS Code" className="ml-auto h-14 w-auto" />
                 </div>
                 <div className="text-xl my-3">Welcome!</div>
-                <div className="text-lg mb-2">
-                    I'm Tuvia Ariel, a Full Stack / Front End Web Developer
-                </div>
+                <div className="text-lg mb-2">I'm Tuvia Ariel, a Front End Web Developer</div>
                 <div className="text-base mb-2">
                     You are using a Phone to view my CV site - please turn the phone on it's side...
                 </div>
@@ -61,7 +59,7 @@ const CV = () => {
                 <div className="bg-[#3c3c3c] h-10 md:h-14 w-full p-1 md:p-3 flex text-gray-300 relative">
                     <img src={portrait} alt="my-logo" className="mr-5 h-8  w-auto rounded-full" />
                     <div className="mt-1">Tuvia Ariel</div>
-                    <div className="mt-1 ml-auto mr-1">Full Stack / Front End Web Developer</div>
+                    <div className="mt-1 ml-auto mr-1">Front End Web Developer</div>
                     <div className="absolute translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2 bg-[#464646] border border-[#505050] rounded-md py-auto px-3 md:px-16 flex ">
                         CV review
                     </div>

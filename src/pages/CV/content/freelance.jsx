@@ -18,9 +18,10 @@ const Freelance = (props) => {
             </div>
             <div className="mb-6">
                 <span className="text-fuchsia-600 mr-2">2023 - Today</span>
-                <span className="text-yellow-500 mr-2">Freelance: Full-Stack Web Developer,</span>I
-                am investing my energy into broadening my skill set across varied technologies while
-                continuing to investigate new employment opportunities.
+                <span className="text-yellow-500 mr-2">Freelance: Front-End Web Developer,</span>
+                Besides working on two different projects as a freelancer, I am investing my energy
+                into broadening my skill set across varied technologies while continuing to
+                investigate new employment opportunities.
             </div>
             <ul className="list-disc text-base mb-12 w-full">
                 <li>
@@ -32,14 +33,14 @@ const Freelance = (props) => {
                         from scratch
                     </div>
                 </li>
-                <li>
+                {/* <li>
                     <div>
                         Building back-end with
                         <Clickable code={11} setSkill={setSkill} /> using
                         <Clickable code={12} setSkill={setSkill} /> while connecting to
                         <Clickable code={10} setSkill={setSkill} />
                     </div>
-                </li>
+                </li> */}
                 <li>
                     <div>
                         Multitasking, prioritizing and managing schedule with
@@ -47,10 +48,7 @@ const Freelance = (props) => {
                     </div>
                 </li>
                 <li>
-                    <div>
-                        Planned architecture to withstand high performance and stability as
-                        MicroServices
-                    </div>
+                    <div>Planned architecture to withstand high performance and stability</div>
                 </li>
                 <li>
                     <div>Modifying and adding features in the component layout</div>

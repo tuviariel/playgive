@@ -25,13 +25,13 @@ const MyLinks = () => {
             </div>
             <div className="flex">
                 <a
-                    href="https://drive.google.com/file/d/1FnZzBuBIY7hDpP5wSE_omyU1E9Fx76ZF/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1y5cJvb0jcS96UvGoUFPsJWu7aju6JWC7/view?usp=sharing"
                     target="_blank"
                     className="text-[#3094DB] cursor-pointer mr-4">
                     CV
                 </a>
                 <a
-                    href="https://drive.google.com/file/d/1FnZzBuBIY7hDpP5wSE_omyU1E9Fx76ZF/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1y5cJvb0jcS96UvGoUFPsJWu7aju6JWC7/view?usp=sharing"
                     target="_blank">
                     https://drive.google.com/file/[my-cv]
                 </a>

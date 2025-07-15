@@ -16,15 +16,23 @@ const Info = (props) => {
             <div className="flex mb-3" ref={title}>
                 <img src={InfoLogo} alt="Info" className="h-10 w-10 mr-2" />
                 <div className="text-2xl">
-                    Summary <span className="text-base">[Update: 10/2024]</span>
+                    Summary <span className="text-base">[Update: 07/2025]</span>
                 </div>
             </div>
             <div className="text-xl mb-1 text-cyan-600">My CV Summary:</div>
             <ul className="list-disc text-base mb-3 w-full">
                 <li>
                     <div>
-                        Six years of experience as a Full Stack / Front End developer in global
-                        High-Tech SaaS, AI and EdTech companies.
+                        Six years of experience as a Front End developer in global High-Tech SaaS,
+                        AI and EdTech companies and as a freelancer. I believe in Efficiency,
+                        Commitment, Trustworthiness.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        I am capable of taking learning materials in every topic and transforming
+                        them into engaging games, enabling users to have an enjoyable and effective
+                        learning experience.
                     </div>
                 </li>
                 <li>
@@ -60,8 +68,7 @@ const Info = (props) => {
                 </li>
                 <li>
                     <div>
-                        Software architecture: OOP, design patterns, MicroServices, RESTful API, all
-                        with
+                        Software architecture: OOP, design patterns, RESTful API, all with
                         <Clickable code={1} setSkill={setSkill} />
                     </div>
                 </li>
